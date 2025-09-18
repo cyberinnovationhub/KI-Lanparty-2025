@@ -1,4 +1,4 @@
-Installation und Setup der Software und integrieren der Sprachmodelle:
+## Installation und Setup der Software und integrieren der Sprachmodelle:
 
 ## Schritt für Schritt 🍀
 
@@ -26,6 +26,12 @@ UI öffnen:
 http://localhost:3000
 Admin‑Konto anlegen.
 Dify mit Ollama verbinden (OpenAI-API-kompatibel) 🔌 Im Dify‑UI: Settings -> Model Providers -> OpenAI-API-compatible -> Add model
+<img width="911" height="1096" alt="image" src="https://github.com/user-attachments/assets/08f7b3f9-fc29-4039-af07-20c7f06e8d14" />
+
+<img width="1129" height="885" alt="image" src="https://github.com/user-attachments/assets/4d167099-17e9-4e12-889b-1854ce28654a" />
+
+<img width="773" height="1293" alt="image" src="https://github.com/user-attachments/assets/50069e22-e24c-4060-a003-6d2dd090db8a" />
+
 Felder ausfüllen (Beispiel: llama3.1:8b):
 
 Model Type: LLM
