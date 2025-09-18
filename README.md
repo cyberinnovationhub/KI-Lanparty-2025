@@ -30,11 +30,12 @@
 3) Dify mit Ollama verbinden (OpenAI-API-kompatibel) 🔌
 Im Dify‑UI: 
 
-Settings:
+- Settings:
 
 <img width="911" height="1096" alt="image" src="https://github.com/user-attachments/assets/520be460-85f1-4ed1-aedc-40ec4ae99a15" />
 
-Modellanbieter -> Nach "OpenAI-API-compatible" suchen -> Modell hinzufügen
+- Modellanbieter -> Nach "OpenAI-API-compatible" suchen -> Modell hinzufügen
+
 <img width="1129" height="885" alt="image" src="https://github.com/user-attachments/assets/7d57814e-bad2-4b93-8587-86903e9ffa37" />
 
 
