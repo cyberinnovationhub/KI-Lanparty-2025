@@ -10,6 +10,7 @@
 - Git installiert
 - Ollama installiert und laufend
 - macOS/Windows empfohlen. Linux geht auch (siehe Hinweise zu host.docker.internal).
+- (für macOS) Homebrew installiert
 
 
 ## Schnellstart (TL;DR) 🌱
