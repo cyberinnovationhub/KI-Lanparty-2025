@@ -22,7 +22,7 @@
 - In den Ordner mit der <ins>docker-compose.yaml</ins> wechseln (siehe Dify README).
 - .env.example nach .env kopieren.
 - `docker compose up -d`
-3) Dify öffnen: http://localhost:3000 und Admin anlegen.
+3) Dify öffnen: http://localhost und Admin anlegen.
 4) In Dify unter Settings -> Model Providers -> OpenAI-API-compatible ein neues Modell hinzufügen:
 - Model Type: LLM
 - API endpoint URL:
