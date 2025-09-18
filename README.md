@@ -26,6 +26,7 @@ UI öffnen:
 http://localhost:3000
 Admin‑Konto anlegen.
 Dify mit Ollama verbinden (OpenAI-API-kompatibel) 🔌 Im Dify‑UI: Settings -> Model Providers -> OpenAI-API-compatible -> Add model
+
 <img width="911" height="1096" alt="image" src="https://github.com/user-attachments/assets/08f7b3f9-fc29-4039-af07-20c7f06e8d14" />
 
 <img width="1129" height="885" alt="image" src="https://github.com/user-attachments/assets/4d167099-17e9-4e12-889b-1854ce28654a" />
