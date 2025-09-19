@@ -1,4 +1,11 @@
 ## Installation und Setup der Software und integrieren der Sprachmodelle:
+Willkommen zur KI-Lanparty Laborumgebung. Dieses Repository führt Sie in die Einrichtung einer sofort einsatzbereiten Demo-Umgebung für eine KI-Lanparty mit drei Prototypen: Zwei KI-Agenten basierend auf einem Low-Code-Framework und einen On-Edge-Sprachassistenten. Die Software läuft lokal auf den Teilnehmerrechnern bzw. bereitgestellter Hardware. Das Setup liefert klare Templates und eine Schritt-für-Schritt-Anleitung, damit Teilnehmer eigene Experimente durchführen und Anpassungen einfach vornehmen können. Die Bereitstellung erfolgt über GitHub, damit Modelle, Vorlagen und Dokumentationen zentral verfügbar sind.
+
+Kurzbeschreibung der verwendeten Software
+
+Dify: Low-Code-Framework zur Erstellung KI-gesteuerter Prototypen; liefert Vorlagen, Systemprompts und einfache Integrationen für KI-Agenten.
+Open WebUI: Grafische Oberfläche zur Interaktion mit lokal laufenden Modellen; ermöglicht einfachen Modellwechsel und -anpassungen.
+Ollama: Lokaler Runner zur Bereitstellung von Modellen (z. B. llama3:8b, qwen3:8b); ermöglicht die direkte Ausführung von KI-Modellen ohne Cloud-Anbindung.
 
 ## Schritt für Schritt 🍀
 
