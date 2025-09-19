@@ -1,5 +1,5 @@
 ## Installation und Setup der Software und integrieren der Sprachmodelle:
-Willkommen zur KI-Lanparty Laborumgebung. Dieses Repository führt Sie in die Einrichtung einer sofort einsatzbereiten Demo-Umgebung für eine KI-Lanparty mit drei Prototypen: Zwei KI-Agenten basierend auf einem Low-Code-Framework und einen On-Edge-Sprachassistenten. Die Software läuft lokal auf den Teilnehmerrechnern bzw. bereitgestellter Hardware. Das Setup liefert klare Templates und eine Schritt-für-Schritt-Anleitung, damit Teilnehmer eigene Experimente durchführen und Anpassungen einfach vornehmen können. Die Bereitstellung erfolgt über GitHub, damit Modelle, Vorlagen und Dokumentationen zentral verfügbar sind.
+Willkommen zur KI-Lanparty Laborumgebung. Dieses Repository führt Sie in die Einrichtung einer sofort einsatzbereiten Demo-Umgebung für eine KI-Lanparty mit drei Prototypen: Zwei KI-Agenten basierend auf einem Low-Code-Framework und einen On-Edge-Sprachassistenten. Die Software läuft lokal auf den Teilnehmerrechnern bzw. bereitgestellter Hardware. Das Setup liefert klare Templates und eine Schritt-für-Schritt-Anleitung, damit Teilnehmer eigene Experimente durchführen und Anpassungen einfach vornehmen können. Die Bereitstellung der Ressourcen für Modelle, Vorlagen und Dokumentation sind in diesem Repository zu finden.
 
 Kurzbeschreibung der verwendeten Software
 
