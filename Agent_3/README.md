@@ -9,8 +9,10 @@
 
 ## Step by Step
 
-1. Pull the Open WebUI Image by running `docker pull ghcr.io/open-webui/open-webui:main` into a Terminal Window. (for computers with limited storage/bad internet, run the slim version instead `docker pull ghcr.io/open-webui/open-webui:main-slim`).
-2. Run the container with `docker run -d -p 3000:8080 -v open-webui:/app/backend/data --name open-webui ghcr.io/open-webui/open-webui:main`. (using the slim version `docker run -d -p 3000:8080 -v open-webui:/app/backend/data --name open-webui ghcr.io/open-webui/open-webui:main-slim`)
+1. Pull the Open WebUI Image by running `docker pull ghcr.io/open-webui/open-webui:main` into a Terminal Window. 
+- (for computers with limited storage/bad internet, run the slim version instead `docker pull ghcr.io/open-webui/open-webui:main-slim`).
+2. Run the container with `docker run -d -p 3000:8080 -v open-webui:/app/backend/data --name open-webui ghcr.io/open-webui/open-webui:main`. 
+- (using the slim version `docker run -d -p 3000:8080 -v open-webui:/app/backend/data --name open-webui ghcr.io/open-webui/open-webui:main-slim`)
 
 > - If you have a dedicated NVIDIA GPU, run this command instead: `docker run -d -p 3000:8080 --gpus all -v open-webui:/app/backend/data --name open-webui ghcr.io/open-webui/open-webui:cuda`
 > - Volume Mapping `-v open-webui:/app/backend/data`: Ensures persistent storage of your data. This prevents data loss between container restarts.
