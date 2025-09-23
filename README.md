@@ -26,7 +26,20 @@ Kurzbeschreibung der verwendeten Software
   - Optional: einfacher API‑Test
     - `curl http://localhost:11434/v1/chat/completions -H "Content-Type: application/json" -H "Authorization: Bearer ollama" -d '{"model":"llama3.1:8b","messages":[{"role":"user","content":"Hallo"}]}'`
 
-2) Dify lokal starten
+2) Sprachmodelle über Ollama laden
+
+- Stare Ollama
+- Suche die gewünschten Modelle (llama3:8b und qwen3:8b):
+  
+  <img width="470" height="351" alt="image" src="https://github.com/user-attachments/assets/a4fcb0c1-0ffa-49a9-845c-a9024a7b1e02" />
+
+- Tippe eine Nachricht in den Chat, um den Download zu starten
+
+  <img width="454" height="336" alt="image" src="https://github.com/user-attachments/assets/153270f0-f50a-4bdb-81db-0fca22239f6a" />
+
+- Lade beide Modelle runter - fertig!
+  
+3) Dify lokal starten
 - Repository klonen:
   - `git clone https://github.com/langgenius/dify`
 - In den Ordner wechseln, der die docker-compose.yaml enthält (siehe Dify‑README).
@@ -38,7 +51,7 @@ Kurzbeschreibung der verwendeten Software
   - http://localhost:3000
 - Admin‑Konto anlegen.
 
-3) Dify mit Ollama verbinden (OpenAI-API-kompatibel) 🔌
+4) Dify mit Ollama verbinden (OpenAI-API-kompatibel) 🔌
 Im Dify‑UI: 
 
 - Settings:
