@@ -46,3 +46,7 @@ Frontend/JavaScript: Wie würdest du eine responsives Single-Page-Application-Ar
 Debugging/Testing: Wie würdest du den Fehler finden, wenn eine API sporadisch 500er Antworten zurückgibt?
 Verhaltensfragen: Beschreibe eine Situation, in der du under Druck eine Entscheidung treffen musstest. Was hast du getan?
 ```
+
+6. Under Settings > Audio > TTS Settings, change the Speech Playback Speed to 1.25x, then under 'Set Voice', select one of the voices followed by `(German (Germany))` (so for example `Flo (German (Germany))`).
+7. Press 'Save' then close the window. Now you should be able to use the voice chat in German, by pressing the soundwave icon on the right side of a new chat.
+> Keep in mind that smaller, local models like this one will use your computer's resources for processing, so the answers will be slower and less accurate than you might be used to.
