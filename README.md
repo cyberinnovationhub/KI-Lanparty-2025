@@ -28,7 +28,7 @@ Kurzbeschreibung der verwendeten Software
 
 2) Sprachmodelle über Ollama laden
 
-- Stare Ollama
+- Starte Ollama
 - Suche die gewünschten Modelle (llama3:8b und qwen3:8b):
   
   <img width="470" height="351" alt="image" src="https://github.com/user-attachments/assets/a4fcb0c1-0ffa-49a9-845c-a9024a7b1e02" />
@@ -37,7 +37,7 @@ Kurzbeschreibung der verwendeten Software
 
   <img width="454" height="336" alt="image" src="https://github.com/user-attachments/assets/153270f0-f50a-4bdb-81db-0fca22239f6a" />
 
-- Lade beide Modelle runter - fertig!
+- Lade beide Modelle runter
   
 3) Dify lokal starten
 - Repository klonen:
