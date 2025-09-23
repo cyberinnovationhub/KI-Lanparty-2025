@@ -10,13 +10,10 @@
 ## Step by Step
 
 1. Pull the Open WebUI Image by running `docker pull ghcr.io/open-webui/open-webui:main` into a Terminal Window. 
-- (for computers with limited storage/bad internet, run the slim version instead `docker pull ghcr.io/open-webui/open-webui:main-slim`).
+    - (for computers with limited storage/bad internet, run the slim version instead `docker pull ghcr.io/open-webui/open-webui:main-slim`).
 2. Run the container with `docker run -d -p 3000:8080 -v open-webui:/app/backend/data --name open-webui ghcr.io/open-webui/open-webui:main`. 
-- (using the slim version `docker run -d -p 3000:8080 -v open-webui:/app/backend/data --name open-webui ghcr.io/open-webui/open-webui:main-slim`)
-
+    - (using the slim version `docker run -d -p 3000:8080 -v open-webui:/app/backend/data --name open-webui ghcr.io/open-webui/open-webui:main-slim`)
 > - If you have a dedicated NVIDIA GPU, run this command instead: `docker run -d -p 3000:8080 --gpus all -v open-webui:/app/backend/data --name open-webui ghcr.io/open-webui/open-webui:cuda`
-> - Volume Mapping `-v open-webui:/app/backend/data`: Ensures persistent storage of your data. This prevents data loss between container restarts.
-> - Port Mapping `-p 3000:8080`: Exposes the WebUI on port 3000 of your local machine.
 
 3. Access the WebUI via http://localhost:3000
 4. Create an account (first created account will be an administrator account)
