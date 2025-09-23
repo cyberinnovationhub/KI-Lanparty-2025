@@ -13,7 +13,7 @@ Kurzbeschreibung der verwendeten Software
 
 ## Schritt für Schritt 🍀
 
-1) Ollama installieren und Modell vorbereiten
+### 1) Ollama installieren und Modell vorbereiten
 - macOS: `brew install ollama`
 - Windows: Installer von ollama.com
 - Linux: curl-Install gemäß ollama.com
@@ -26,7 +26,7 @@ Kurzbeschreibung der verwendeten Software
   - Optional: einfacher API‑Test
     - `curl http://localhost:11434/v1/chat/completions -H "Content-Type: application/json" -H "Authorization: Bearer ollama" -d '{"model":"llama3.1:8b","messages":[{"role":"user","content":"Hallo"}]}'`
 
-2) Sprachmodelle über Ollama laden
+### 2) Sprachmodelle über Ollama laden
 
 - Starte Ollama
 - Suche die gewünschten Modelle (llama3:8b und qwen3:8b):
@@ -39,7 +39,7 @@ Kurzbeschreibung der verwendeten Software
 
 - Lade beide Modelle runter
   
-3) Dify lokal starten
+### 3) Dify lokal starten
 - Repository klonen:
   - `git clone https://github.com/langgenius/dify`
 - In den Ordner wechseln, der die docker-compose.yaml enthält (siehe Dify‑README).
@@ -51,7 +51,7 @@ Kurzbeschreibung der verwendeten Software
   - http://localhost:3000
 - Admin‑Konto anlegen.
 
-4) Dify mit Ollama verbinden (OpenAI-API-kompatibel) 🔌
+### 4) Dify mit Ollama verbinden (OpenAI-API-kompatibel) 🔌
 Im Dify‑UI: 
 
 - Settings:
