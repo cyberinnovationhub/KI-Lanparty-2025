@@ -4,7 +4,7 @@
 ### Voraussetzungen
 - Docker Desktop installiert und laufend
 - Git installiert
-- Ollama (und die Modelle llama3.1:8b und qwen3-8b) installiert
+- Ollama (und die Modelle llama3.1:8b und qwen3:8b) installiert
 - macOS/Windows empfohlen. Linux geht auch (siehe Dify Doku für Linux).
 - (für macOS) Homebrew installiert
 
@@ -36,7 +36,7 @@
   - http://localhost:3000 oder `localhost:3000` als URL eingeben und Enter drücken
 - Admin‑Konto anlegen.
 
-3) Dify mit Ollama verbinden (OpenAI-API-kompatibel) 🔌
+3) Dify mit Ollama verbinden
 Im Dify‑UI: Settings -> Model Providers -> OpenAI-API-compatible -> Add model
 
 Felder ausfüllen (Beispiel: llama3.1:8b):
