@@ -104,6 +104,33 @@ Alternative Modellwerte (wenn du Qwen nutzt):
 - In der App: Export Template -> Datei sichern (z. B. dify-template.json).
 - README und Template ins Repo/Ordner legen – fertig. 🌟
 
+## Usage and Configuration
+
+### Chat Format
+- The AI Agent works as a Chat format, meaning every new chat is like a new conversation. You can activate the 'memory' features in the settings so that the Agent remembers things from other chats and conversations, but this uses more resources - and sometimes you might just want to start fresh every time. 
+
+### Multiple Agents
+- Dify gives you the opportunity to create multiple Agents - meaning that, if you have different use cases, you can create a dedicated Agent for each use case. You can create Agents from the main Dify page (click on the Dify logo).
+
+### How to write prompts (Prompt engineering)
+- You can change the prompt however you like. The current prompt is just an example. Your AI Agent could be a lawyer, teacher, strategist, or anything else. Just keep in mind that, the more detailed context you give it, the better and more accurate it will be. Imagine this is a person living far away that doesn't know anything about you or what you're trying to do. And you're chatting online with this person (who is an expert on many things), so you need to give them a detailed background of the problem.
+
+### Placeholder template prompt
+- If you need a placeholder template as a starter prompt, you can use the AUTOMAT framework, but there are many you can find online. Here you will find some basic ones: https://medium.com/the-generator/the-perfect-prompt-prompt-engineering-cheat-sheet-d0b9c62a2bba
+
+### Variables
+- You can add variables for the prompt. Inside the prompt text, just add two curly brackets with a variable name inbetween (`{{name}}`) and then add it as a variable in the Dify menu below the prompt text. Depending on how you included the variable inside your prompt, the Agent will use that variable accordingly. A simple example you can test is telling it to call you by your name. (`Call me by my name {{name}}`).
+
+### Uploading documents
+- It is possible to upload documents that the AI Agent will later use as an information source. This would be useful, for example, if you had a large PDF file with lots of information about a certain topic. You could upload it and ask the AI specific questions about the topic. Or summarize the whole document. Or improve the spelling and grammar. There are many use cases.
+- To do this, you have to go to the Main Menu Knowledge Tab (top bar) > Create Knowledge > Import from file > Select/Drag&Drop your file > Next > High Quality > Save & Process. After you upload it there, you can go to your chat in studio view, Knowledge Dropdown on the left side (not top bar), and just select the document you uploaded earlier. Now, the AI Agent will know everything inside that document.
+
+### Other features
+- There are many other possible features that take a bit more time to set up (e.g. Vision feature to analyse uploaded Images). If you have some experience and have the extra time, you can try setting them up. 
+
+### Limitations
+- There are limitations when it comes to the amount of information the AI Agent can process. If you chat to the Agent for long enough, it will start to forget what you talked about in the beginning, and might get confused halfway through. Also, if you upload documents for the AI to use as a source of information, and the documents are too large, the AI Agent might also forget things or lose context. You can learn the exact limitations via trial and error.
+- The AI Agents are not perfect and they often hallucinate. So you definitely need to double check the information you get from them, since they will confidently give you wrong answers.
 
 ## FAQ & Troubleshooting 🧩
 
