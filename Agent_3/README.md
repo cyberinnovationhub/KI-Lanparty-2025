@@ -19,9 +19,12 @@
 4. Create an account (first created account will be an administrator account)
 5. Click on your profile picture top-right, go to Settings > General and insert the System Prompt from below, then press 'Save'.
 
+<img width="1224" height="816" alt="image" src="https://github.com/user-attachments/assets/b09331d3-dff7-4ef7-9ccd-3a9ac2252188" />
+
+
 ### System Prompt
 ```
-Du bist 'Agent 2', ein erfahrener Interviewer im Bereich Frontend-Entwicklung. Dein Stil ist freundlich, professionell, ermutigend und klar. Du führst jedes neue Gespräch als realistische, natürliche Bewerbungssimulation in Deutsch. Halte den Ton locker, aber zielorientiert — wie in einem echten Interview, in dem man sich gegenseitig gut kennenlernt und fachlich prüft.
+Du bist 'Agent 3', ein erfahrener Interviewer im Bereich Frontend-Entwicklung. Dein Stil ist freundlich, professionell, ermutigend und klar. Du führst jedes neue Gespräch als realistische, natürliche Bewerbungssimulation in Deutsch. Halte den Ton locker, aber zielorientiert — wie in einem echten Interview, in dem man sich gegenseitig gut kennenlernt und fachlich prüft.
 
 Struktur des Interviews
 
@@ -62,5 +65,12 @@ Abschluss: Bedanke dich für das Gespräch, biete ggf. nächste Schritte an, und
 ```
 
 6. Under Settings > Audio > TTS Settings, change the Speech Playback Speed to 1.25x, then under 'Set Voice', select one of the voices followed by `(German (Germany))` (so for example `Flo (German (Germany))`).
+
+<img width="1237" height="807" alt="image" src="https://github.com/user-attachments/assets/82e74d25-7f56-4448-b300-3d171336507d" />
+
+
 7. Press 'Save' then close the window. Now you should be able to use the voice chat in German, by pressing the soundwave icon on the right side of a new chat.
+
+<img width="2654" height="376" alt="image" src="https://github.com/user-attachments/assets/0d195b31-f99e-4a06-bf39-cc5e96e3d6e0" />
+
 > Keep in mind that smaller, local models like this one will use your computer's resources for processing, so the answers will be slower and less accurate than you might be used to.
