@@ -1,9 +1,5 @@
-# I) Installation Lokaler KI‑Agent ohne RAG (Dify + Ollama) ✨
+# I) Installation KI‑Agent 1 ohne RAG (Dify + Ollama) ✨
 
-### Ziel
-- In 60–90 Minuten einen lokalen KI‑Agenten (ohne RAG) mit Dify und einem lokalen LLM (Ollama) aufsetzen.
-- Keine Azure, keine Embeddings, kein RAG. Nur ein klarer, mehrstufiger Prozess (Design Thinking) mit vorgefertigtem Systemprompt.
-- Am Ende kannst du die Dify‑App als Template exportieren und weitergeben.
 
 ### Voraussetzungen
 - Docker Desktop installiert und laufend
@@ -13,36 +9,16 @@
 - (für macOS) Homebrew installiert
 
 
-## Schnellstart (TL;DR) 🌱
-
-1) Ollama installieren und ein Modell ziehen:
-- `ollama pull llama3.1:8b`
-2) Dify Repo klonen und starten:
-- `git clone https://github.com/langgenius/dify`
-- In den Ordner mit der <ins>docker-compose.yaml</ins> wechseln (siehe Dify README).
-- .env.example nach .env kopieren.
-- `docker compose up -d`
-3) Dify öffnen: http://localhost und Admin anlegen.
-4) In Dify unter Settings -> Model Providers -> OpenAI-API-compatible ein neues Modell hinzufügen:
-- Model Type: LLM
-- API endpoint URL:
-  - macOS/Windows: http://host.docker.internal:11434/v1
-  - Linux: http://172.17.0.1:11434/v1 (oder Docker-Bridge-Gateway)
-- API Key: ollama (beliebiger String)
-- Model Name und model name for API endpoint: exakt der Ollama‑Tag, z. B. llama3.1:8b
-5) Chat App erstellen, RAG/Knowledge aus lassen, Systemprompt einfügen, veröffentlichen, testen.
-
-
-## Schritt für Schritt 🍀
+## Setup
 
 1) Ollama installieren und Modell vorbereiten
-- macOS: `brew install ollama`
+- macOS: `brew install ollama` / Installer von ollama.com
 - Windows: Installer von ollama.com
 - Linux: curl-Install gemäß ollama.com
-- Service starten (läuft meist automatisch nach Installation).
+- App starten (läuft meist automatisch nach Installation).
 - Modell ziehen:
-  - `ollama pull llama3.1:8b`
-  - Alternativ: `ollama pull qwen3:8b`
+  - via Terminal Befehl: `ollama pull llama3.1:8b` und danach`ollama pull qwen3:8b`
+  - via Ollama App UI: Ollama starten > `llama3.1:8b` Modell auswählen > 'Hallo' im Chat schreiben und schicken > App lädt model automatisch runter > Das gleiche noch mal machen für `qwen3:8b` Modell.
 - Testen:
   - `ollama list` (zeigt installierte Modelle)
   - Optional: einfacher API‑Test
@@ -75,10 +51,10 @@ Felder ausfüllen (Beispiel: llama3.1:8b):
 - model name for API endpoint: llama3.1:8b  [muss exakt zum Ollama‑Tag passen]
 
 Alternative Modellwerte (wenn du Qwen nutzt):
-- Model Name: qwen2.5:7b-instruct
-- model name for API endpoint: qwen2.5:7b-instruct
+- Model Name: qwen3:8b
+- model name for API endpoint: qwen3:8b
 
-4) Chat App erstellen (ohne RAG)
+4) Chat App erstellen
 - In Dify: Create App -> Chat App.
 - Provider: OpenAI-API-compatible wählen, dein Modell auswählen.
 - Knowledge/RAG: nicht hinzufügen bzw. deaktiviert lassen.
