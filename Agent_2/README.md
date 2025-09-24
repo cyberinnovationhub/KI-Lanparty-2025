@@ -8,8 +8,8 @@
 ### Voraussetzungen
 - Docker Desktop installiert und laufend
 - Git installiert
-- Ollama installiert und laufend
-- macOS/Windows empfohlen. Linux geht auch (siehe Hinweise zu host.docker.internal).
+- Ollama (und die Modelle llama3.1:8b und qwen3-8b) installiert
+- macOS/Windows empfohlen. Linux geht auch (siehe Dify Doku für Linux).
 - (für macOS) Homebrew installiert
 
 
@@ -19,10 +19,10 @@
 - `ollama pull llama3.1:8b`
 2) Dify Repo klonen und starten:
 - `git clone https://github.com/langgenius/dify`
-- In den Ordner mit der <ins>docker-compose.yaml</ins> wechseln (siehe Dify README).
-- .env.example nach .env kopieren.
+- In den docker Ordner mit der <ins>docker-compose.yaml</ins> wechseln (siehe Dify README).
+- .env.example Inhalt nach .env (neu erstellte Datei) kopieren.
 - `docker compose up -d`
-3) Dify öffnen: http://localhost und Admin anlegen.
+3) Dify öffnen: http://localhost und Admin Konto anlegen.
 4) In Dify unter Settings -> Model Providers -> OpenAI-API-compatible ein neues Modell hinzufügen:
 - Model Type: LLM
 - API endpoint URL:
@@ -36,7 +36,7 @@
 ## Schritt für Schritt 🍀
 
 1) Ollama installieren und Modell vorbereiten
-- macOS: `brew install ollama`
+- macOS: `brew install ollama` / Installer von ollama.com
 - Windows: Installer von ollama.com
 - Linux: curl-Install gemäß ollama.com
 - Service starten (läuft meist automatisch nach Installation).
@@ -75,8 +75,8 @@ Felder ausfüllen (Beispiel: llama3.1:8b):
 - model name for API endpoint: llama3.1:8b  [muss exakt zum Ollama‑Tag passen]
 
 Alternative Modellwerte (wenn du Qwen nutzt):
-- Model Name: qwen2.5:7b-instruct
-- model name for API endpoint: qwen2.5:7b-instruct
+- Model Name: qwen3:8b
+- model name for API endpoint: qwen3:8b
 
 4) Chat App erstellen (ohne RAG)
 - In Dify: Create App -> Chat App.
