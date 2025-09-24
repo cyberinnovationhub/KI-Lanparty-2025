@@ -4,8 +4,8 @@
 ### Voraussetzungen
 - Docker Desktop installiert und laufend
 - Git installiert
-- Ollama installiert und laufend
-- macOS/Windows empfohlen. Linux geht auch (siehe Hinweise zu host.docker.internal).
+- Ollama (und die Modelle llama3.1:8b und qwen3-8b) installiert
+- macOS/Windows empfohlen. Linux geht auch (siehe Dify Doku für Linux).
 - (für macOS) Homebrew installiert
 
 
