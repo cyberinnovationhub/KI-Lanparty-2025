@@ -78,6 +78,11 @@ Felder ausfüllen (Beispiel: llama3.1:8b):
 <img width="773" height="1293" alt="image" src="https://github.com/user-attachments/assets/81869b51-e41e-4480-8793-747bfae8fbd3" />
 
 
+> ### Good job! You finished the initial setup.
+> ### You can move on to the Agent_1 README now. 
+> Or, if you're still a bit unsure, you can read the Usage / FAQ Sections below.
+
+
 ## Usage and Configuration
 
 ### Chat Format
