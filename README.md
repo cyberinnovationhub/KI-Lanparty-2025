@@ -26,7 +26,7 @@ Kurzbeschreibung der verwendeten Software
 #### 1.2) Sprachmodelle über Ollama UI ziehen
 
 - Starte Ollama
-- Suche die gewünschten Modelle (llama3:8b und qwen3:8b):
+- Suche die gewünschten Modelle (`llama3:8b` und `qwen3:8b`):
   
   <img width="470" height="351" alt="image" src="https://github.com/user-attachments/assets/a4fcb0c1-0ffa-49a9-845c-a9024a7b1e02" />
 
@@ -34,18 +34,18 @@ Kurzbeschreibung der verwendeten Software
 
   <img width="454" height="336" alt="image" src="https://github.com/user-attachments/assets/153270f0-f50a-4bdb-81db-0fca22239f6a" />
 
-- Lade beide Modelle runter
+- Lade beide Modelle runter (`llama3.1:8b` und `qwen3:8b`)
   
 ### 3) Dify lokal starten
 - Repository klonen:
   - `git clone https://github.com/langgenius/dify`
 - In den Ordner wechseln, der die docker-compose.yaml enthält (siehe Dify‑README).
-- .env anlegen:
-  - Kopiere .env.example nach .env
+- neue .env Datei anlegen:
+  - Kopiere .env.example Inhalt nach .env
 - Start:
   - `docker compose up -d`
 - UI öffnen:
-  - http://localhost:3000
+  - http://localhost:3000 oder `localhost:3000` als URL eingeben und Enter drücken
 - Admin‑Konto anlegen.
 
 ### 4) Dify mit Ollama verbinden (OpenAI-API-kompatibel) 🔌
@@ -72,11 +72,6 @@ Felder ausfüllen (Beispiel: llama3.1:8b):
 - model name for API endpoint: llama3.1:8b  [muss exakt zum Ollama‑Tag passen]
 
 <img width="773" height="1293" alt="image" src="https://github.com/user-attachments/assets/81869b51-e41e-4480-8793-747bfae8fbd3" />
-
-
-Alternative Modellwerte (wenn du Qwen nutzt):
-- Model Name: qwen2.5:7b-instruct
-- model name for API endpoint: qwen2.5:7b-instruct
 
 
 ## FAQ & Troubleshooting 🧩

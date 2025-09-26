@@ -11,66 +11,25 @@
 
 ## Setup
 
-### 1) Ollama installieren und Modell vorbereiten
-- macOS: `brew install ollama` / Installer von ollama.com
-- Windows: Installer von ollama.com
-- Linux: curl-Install gemäß ollama.com
-- App starten (läuft meist automatisch nach Installation).
-- Modell ziehen:
-  - via Terminal Befehl: `ollama pull llama3.1:8b` und danach`ollama pull qwen3:8b`
-  - via Ollama App UI: Ollama starten > `llama3.1:8b` Modell auswählen > 'Hallo' im Chat schreiben und schicken > App lädt model automatisch runter > Das gleiche noch mal machen für `qwen3:8b` Modell.
-- Testen:
-  - `ollama list` (zeigt installierte Modelle)
-  - Optional: einfacher API‑Test
-    - `curl http://localhost:11434/v1/chat/completions -H "Content-Type: application/json" -H "Authorization: Bearer ollama" -d '{"model":"llama3.1:8b","messages":[{"role":"user","content":"Hallo"}]}'`
+### 1) Dify mit Ollama verbinden
 
-### 2) Dify lokal starten
-- Repository klonen:
-  - `git clone https://github.com/langgenius/dify`
-- In den Ordner wechseln, der die docker-compose.yaml enthält (siehe Dify‑README).
-- neue .env Datei anlegen:
-  - Kopiere .env.example Inhalt nach .env
-- Start:
-  - `docker compose up -d`
-- UI öffnen:
-  - http://localhost:3000 oder `localhost:3000` als URL eingeben und Enter drücken
-- Admin‑Konto anlegen.
+#### 1.1) Im Dify‑UI: rechts oben auf Profilbild klicken -> Settings -> Model Providers -> Azure OpenAI Service Model -> Add model
 
-### 3) Dify mit Ollama verbinden
-
-#### 3.1) Im Dify‑UI: Settings -> Model Providers -> OpenAI-API-compatible -> Add model
-
-Felder ausfüllen (Beispiel: llama3.1:8b):
+#### 1.2) Felder ausfüllen:
+- Deployment Name: `ai-lanparty`
 - Model Type: LLM
-- Model Name: llama3.1:8b
-- Authorization Name: Authorization
-- Model display name: Llama 3.1 8B (Ollama)  [frei wählbar]
-- API Key: ollama  [beliebiger String, wird von Ollama nicht geprüft]
-- API endpoint URL:
-  - macOS/Windows: http://host.docker.internal:11434/v1
-  - Linux: http://172.17.0.1:11434/v1 (oder das Gateway aus docker network inspect bridge)
-- model name for API endpoint: llama3.1:8b  [muss exakt zum Ollama‑Tag passen]
-
-Alternative Modellwerte (wenn du Qwen nutzt):
-- Model Name: qwen3:8b
-- model name for API endpoint: qwen3:8b
-
-#### 3.2) Im Dify‑UI: Settings -> Model Providers -> Azure OpenAI Service Model -> Add model
-
-Felder ausfüllen:
-- Deployment Name: ai-lanparty
-- Model Type: LLM
-- Authorization Name: Authorization GPT-4o
+- Authorization Name: `Authorization GPT-4o`
 - API Endpoint URL: https://ai-lanparty.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2025-01-01-preview
 - API Key: vor Ort Fragen
-- API Version: 2025-01-01-preview
-- Base Model: gpt-4o
+- API Version: `2025-01-01-preview`
+- Base Model: `gpt-4o`
 
-### 4) Chat App erstellen
-- In Dify: Create App -> Chat App.
-- Provider: OpenAI-API-compatible wählen, dein Modell auswählen.
-- Knowledge/RAG: nicht hinzufügen bzw. deaktiviert lassen.
-- System Prompt (einfügen und bei Bedarf anpassen):
+### 2) Agent 1 Chat App erstellen
+
+#### 2.1) In Dify: Create App -> Chat App.
+  - Provider: OpenAI-API-compatible wählen, dein Modell auswählen.
+  - Knowledge/RAG: nicht hinzufügen bzw. deaktiviert lassen.
+#### 2.2) System Prompt einfügen (und bei Bedarf anpassen):
   >   - Opening message: z. B. Willkommen! Ich begleite dich Schritt für Schritt durch Design Thinking. Nenne mir zuerst kurz dein Problem oder Ziel. Danach starten wir mit Phase 1 – Empathize.
   >   - Rolle und Ziel:
   >   - Du bist ein methodischer Moderator, der den Anwender strikt durch ein mehrstufiges Design-Thinking-Verfahren führt, um eine Lösung für ein von ihm benanntes Problem zu entwickeln. Keine Wissensanreicherung aus externen Quellen verwenden.
@@ -86,9 +45,9 @@ Felder ausfüllen:
   >   - Referenziere die Nutzerantworten korrekt und iteriere.
   > - Abschluss:
   >   - Erzeuge eine Endzusammenfassung mit: Problemstatement, Annahmen, ausgewählte Idee(n), Prototyp-Plan, Testplan, Risiken/Nächste Schritte.
-- Publish klicken > Publish update > Run App .
+#### 2.3) Publish klicken > Publish update > Run App .
 
-### 5) Template exportieren (für die Weitergabe)
+### 3) Template für die Weitergabe exportieren (optional)
 - In der App: Export Template -> Datei sichern (z. B. dify-template.json).
 
 ## Usage and Configuration
