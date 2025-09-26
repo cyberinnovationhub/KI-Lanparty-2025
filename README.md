@@ -52,6 +52,9 @@ Die Software läuft lokal auf den Teilnehmerrechnern bzw. bereitgestellter Hardw
   - http://localhost:3000 oder `localhost:3000` als URL eingeben und Enter drücken
 - Admin‑Konto anlegen.
 
+> ### Stop here if you want to work with templates (easier and faster) and go to Agent 1 README.
+> ### If you want to learn how to do it yourself, follow the next steps below (more complicated and takes longer)
+
 ### 4) Dify mit Ollama verbinden (OpenAI-API-kompatibel) 🔌
 Im Dify‑UI: 
 
