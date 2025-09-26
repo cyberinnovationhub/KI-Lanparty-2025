@@ -14,19 +14,16 @@ Kurzbeschreibung der verwendeten Software
 ## Schritt für Schritt 🍀
 
 ### 1) Ollama installieren und Modell vorbereiten
-- macOS: `brew install ollama`
+- macOS: `brew install ollama` / Installer von ollama.com
 - Windows: Installer von ollama.com
 - Linux: curl-Install gemäß ollama.com
-- Service starten (läuft meist automatisch nach Installation).
-- Modell ziehen:
-  - `ollama pull llama3.1:8b`
-  - Alternativ: `ollama pull qwen2.5:7b-instruct`
-- Testen:
-  - `ollama list` (zeigt installierte Modelle)
-  - Optional: einfacher API‑Test
-    - `curl http://localhost:11434/v1/chat/completions -H "Content-Type: application/json" -H "Authorization: Bearer ollama" -d '{"model":"llama3.1:8b","messages":[{"role":"user","content":"Hallo"}]}'`
 
-### 2) Sprachmodelle über Ollama laden
+#### 1.1) Sprachmodelle über Terminal ziehen
+  - via Ollama App UI: folge Step 1.2
+  - via Terminal Befehl: `ollama pull llama3.1:8b` und danach`ollama pull qwen3:8b`
+    - Testen: `ollama list` (zeigt installierte Modelle)
+
+#### 1.2) Sprachmodelle über Ollama UI ziehen
 
 - Starte Ollama
 - Suche die gewünschten Modelle (llama3:8b und qwen3:8b):
