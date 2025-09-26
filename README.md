@@ -11,7 +11,7 @@ Kurzbeschreibung der verwendeten Software
 
 - Ollama: Lokaler Runner zur Bereitstellung von Modellen (z. B. llama3:8b, qwen3:8b); ermöglicht die direkte Ausführung von KI-Modellen ohne Cloud-Anbindung.
 
-## Schritt für Schritt 🍀
+## Setup
 
 ### 1) Ollama installieren und Modell vorbereiten
 - macOS: `brew install ollama` / Installer von ollama.com
