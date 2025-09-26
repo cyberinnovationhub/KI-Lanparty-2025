@@ -6,6 +6,7 @@
 - Docker Desktop installiert und laufend
 - Ollama installiert und laufend (+ qwen3:8b und llama3.1:8b runtergeladen)
 - macOS/Windows empfohlen
+- README (allgemein) Doku fertig
 
 ## Step by Step
 
