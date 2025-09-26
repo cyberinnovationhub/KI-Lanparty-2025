@@ -7,6 +7,7 @@
 - Ollama (und die Modelle llama3.1:8b und qwen3:8b) installiert
 - macOS/Windows empfohlen. Linux geht auch (siehe Dify Doku für Linux).
 - (für macOS) Homebrew installiert
+- README (allgemein) Doku fertig
 
 
 ## Setup
