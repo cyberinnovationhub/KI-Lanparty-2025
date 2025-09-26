@@ -1,7 +1,11 @@
-## Installation und Setup der Software und integrieren der Sprachmodelle:
-Willkommen zur KI-Lanparty Laborumgebung. Dieses Repository führt Sie in die Einrichtung einer sofort einsatzbereiten Demo-Umgebung für eine KI-Lanparty mit drei Prototypen: Zwei KI-Agenten basierend auf einem Low-Code-Framework und einen On-Edge-Sprachassistenten. Die Software läuft lokal auf den Teilnehmerrechnern bzw. bereitgestellter Hardware. Das Setup liefert klare Templates und eine Schritt-für-Schritt-Anleitung, damit Teilnehmer eigene Experimente durchführen und Anpassungen einfach vornehmen können. Die Bereitstellung der Ressourcen für Modelle, Vorlagen und Dokumentation sind in diesem Repository zu finden.
+# README (Allgemein) - KI-Lanparty
+Willkommen zur KI-Lanparty Laborumgebung! 👋 
 
-Kurzbeschreibung der verwendeten Software
+Dieses Repository führt Sie in die Einrichtung einer sofort einsatzbereiten Demo-Umgebung für eine KI-Lanparty mit drei Prototypen: Zwei KI-Agenten basierend auf einem Low-Code-Framework und einen On-Edge-Sprachassistenten. 
+
+Die Software läuft lokal auf den Teilnehmerrechnern bzw. bereitgestellter Hardware. Das Setup liefert klare Templates und Anleitunen, damit Teilnehmer selbst Experimente durchführen können.
+
+### Kurzbeschreibung der verwendeten Software
 
 - Docker: Docker ist eine Container-Plattform, die Anwendungen inklusive ihrer Abhängigkeiten in isolierten Containern verpackt.
 
@@ -72,6 +76,35 @@ Felder ausfüllen (Beispiel: llama3.1:8b):
 - model name for API endpoint: llama3.1:8b  [muss exakt zum Ollama‑Tag passen]
 
 <img width="773" height="1293" alt="image" src="https://github.com/user-attachments/assets/81869b51-e41e-4480-8793-747bfae8fbd3" />
+
+
+## Usage and Configuration
+
+### Chat Format
+- The AI Agent works as a Chat format, meaning every new chat is like a new conversation. You can activate the 'memory' features in the settings so that the Agent remembers things from other chats and conversations, but this uses more resources - and sometimes you might just want to start fresh every time. 
+
+### Multiple Agents
+- Dify gives you the opportunity to create multiple Agents - meaning that, if you have different use cases, you can create a dedicated Agent for each use case. You can create Agents from the main Dify page (click on the Dify logo).
+
+### How to write prompts (Prompt engineering)
+- You can change the prompt however you like. The current prompt is just an example. Your AI Agent could be a lawyer, teacher, strategist, or anything else. Just keep in mind that, the more detailed context you give it, the better and more accurate it will be. Imagine this is a person living far away that doesn't know anything about you or what you're trying to do. And you're chatting online with this person (who is an expert on many things), so you need to give them a detailed background of the problem.
+
+### Placeholder template prompt
+- If you need a placeholder template as a starter prompt, you can use the AUTOMAT framework, but there are many you can find online. Here you will find some basic ones: https://medium.com/the-generator/the-perfect-prompt-prompt-engineering-cheat-sheet-d0b9c62a2bba
+
+### Variables
+- You can add variables for the prompt. Inside the prompt text, just add two curly brackets with a variable name inbetween (`{{name}}`) and then add it as a variable in the Dify menu below the prompt text. Depending on how you included the variable inside your prompt, the Agent will use that variable accordingly. A simple example you can test is telling it to call you by your name. (`Call me by my name {{name}}`).
+
+### Uploading documents
+- It is possible to upload documents that the AI Agent will later use as an information source. This would be useful, for example, if you had a large PDF file with lots of information about a certain topic. You could upload it and ask the AI specific questions about the topic. Or summarize the whole document. Or improve the spelling and grammar. There are many use cases.
+- To do this, you have to go to the Main Menu Knowledge Tab (top bar) > Create Knowledge > Import from file > Select/Drag&Drop your file > Next > High Quality > Save & Process. After you upload it there, you can go to your chat in studio view, Knowledge Dropdown on the left side (not top bar), and just select the document you uploaded earlier. Now, the AI Agent will know everything inside that document.
+
+### Other features
+- There are many other possible features that take a bit more time to set up (e.g. Vision feature to analyse uploaded Images). If you have some experience and have the extra time, you can try setting them up. 
+
+### Limitations
+- There are limitations when it comes to the amount of information the AI Agent can process. If you chat to the Agent for long enough, it will start to forget what you talked about in the beginning, and might get confused halfway through. Also, if you upload documents for the AI to use as a source of information, and the documents are too large, the AI Agent might also forget things or lose context. You can learn the exact limitations via trial and error.
+- The AI Agents are not perfect and they often hallucinate. So you definitely need to double check the information you get from them, since they will confidently give you wrong answers.
 
 
 ## FAQ & Troubleshooting 🧩

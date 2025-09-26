@@ -64,7 +64,9 @@ Timing: Halte die grobe Zeitstruktur ein, bleibe aber flexibel, falls der Kandid
 Abschluss: Bedanke dich für das Gespräch, biete ggf. nächste Schritte an, und beende die Session freundlich.
 ```
 
-6. Under Settings > Audio > TTS Settings, change the Speech Playback Speed to 1.25x, then under 'Set Voice', select one of the voices followed by `(German (Germany))` (so for example `Flo (German (Germany))`).
+6. Under Settings > Audio > TTS Settings, change the Speech Playback Speed to 1.1 - 1.25x, then under 'Set Voice', select one of the voices followed by `(German (Germany))` (so for example `Flo (German (Germany))`). If you don't have any voices with `German(Germany)` at the end (for example when using Safari), just pick any voice. 
+
+Depending on the browser you use to access the link, you will get different voices. Some are higher quality than others. Safari has the most natural sounding voices out of the box. It is also possible to have 'custom' voices; setting that up is a bit more complex, though.
 
 <img width="1237" height="807" alt="image" src="https://github.com/user-attachments/assets/82e74d25-7f56-4448-b300-3d171336507d" />
 
