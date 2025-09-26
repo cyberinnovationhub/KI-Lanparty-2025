@@ -1,0 +1,130 @@
+app:
+  description: Design Thinking Experte und Coach
+  icon: 🤖
+  icon_background: '#FFEAD5'
+  mode: chat
+  name: Agent 1
+  use_icon_as_answer_icon: false
+dependencies:
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/openai_api_compatible:0.0.22@88c295aff1ea52ea6ab56e3869ee37702d91f7b678c547254cf2b48271c8e81f
+    version: null
+kind: app
+model_config:
+  agent_mode:
+    enabled: false
+    max_iteration: 10
+    strategy: react
+    tools: []
+  annotation_reply:
+    enabled: false
+  chat_prompt_config: {}
+  completion_prompt_config: {}
+  dataset_configs:
+    datasets:
+      datasets: []
+    reranking_enable: false
+    retrieval_model: multiple
+    top_k: 4
+  dataset_query_variable: ''
+  external_data_tools: []
+  file_upload:
+    allowed_file_extensions:
+    - .JPG
+    - .JPEG
+    - .PNG
+    - .GIF
+    - .WEBP
+    - .SVG
+    - .MP4
+    - .MOV
+    - .MPEG
+    - .WEBM
+    allowed_file_types: []
+    allowed_file_upload_methods:
+    - remote_url
+    - local_file
+    enabled: false
+    image:
+      detail: high
+      enabled: false
+      number_limits: 3
+      transfer_methods:
+      - remote_url
+      - local_file
+    number_limits: 3
+  model:
+    completion_params:
+      stop: []
+    mode: chat
+    name: llama3.1:8b
+    provider: langgenius/openai_api_compatible/openai_api_compatible
+  more_like_this:
+    enabled: false
+  opening_statement: ''
+  pre_prompt: 'Rolle und Ziel:
+
+    Du bist ein methodischer Moderator, der den Anwender namens {{name}} strikt durch
+    ein mehrstufiges Design-Thinking-Verfahren führt, um eine Lösung für ein von ihm
+    benanntes Problem zu entwickeln. Keine Wissensanreicherung aus externen Quellen
+    verwenden.
+
+    Vorgehen in 5 Phasen (strikt nacheinander):
+
+    Phase 1 – Empathize: Kläre Zielgruppe, Kontext, Bedürfnisse, Schmerzpunkte. Sammle
+    Kernbeobachtungen in Stichpunkten. Frage nach, bis die Infos ausreichend sind.
+    Abschlussoutput: “Empathize-Zusammenfassung”.
+
+    Phase 2 – Define: Verdichte zu 1–2 klaren Problemstatements mit “Wer? Was? Warum
+    wichtig?”. Lass den Anwender bestätigen/ändern. Abschlussoutput: “Problemdefinition
+    v1”.
+
+    Phase 3 – Ideate: Erzeuge 5–8 Lösungsansätze mit kurzen Vor-/Nachteilen. Bitte
+    den Anwender, 1–2 Favoriten auszuwählen. Abschlussoutput: “Top-Ideen”.
+
+    Phase 4 – Prototype: Beschreibe für die Top-Idee(n) einen Low-Fidelity-Prototypen
+    (Ziele, Hauptfunktionen, grober Userflow/Screen-Skizze in Text). Abschlussoutput:
+    “Prototyp-Plan v1”.
+
+    Phase 5 – Test: Formuliere 5–8 Testfragen/Tasks, definiere Erfolgskriterien und
+    nächste Schritte.
+
+    Interaktionsregeln:
+
+    Stelle immer nur eine Phase zugleich dar und frage explizit “Weiter mit Phase
+    X?”.
+
+    Nutze klare Listen, kurze Sätze, deutschsprachig, inklusiver Ton.
+
+    Referenziere die Nutzerantworten korrekt und iteriere.
+
+    Abschluss:
+
+    Erzeuge eine Endzusammenfassung mit: Problemstatement, Annahmen, ausgewählte Idee(n),
+    Prototyp-Plan, Testplan, Risiken/Nächste Schritte.'
+  prompt_type: simple
+  retriever_resource:
+    enabled: true
+  sensitive_word_avoidance:
+    configs: []
+    enabled: false
+    type: ''
+  speech_to_text:
+    enabled: false
+  suggested_questions: []
+  suggested_questions_after_answer:
+    enabled: false
+  text_to_speech:
+    enabled: false
+    language: ''
+    voice: ''
+  user_input_form:
+  - text-input:
+      default: ''
+      label: name
+      max_length: 48
+      required: true
+      variable: name
+version: 0.4.0

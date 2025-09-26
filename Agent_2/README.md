@@ -25,7 +25,7 @@
 - API Version: `2025-01-01-preview`
 - Base Model: `gpt-4o`
 
-### 2) Agent 1 Chat App erstellen
+### 2) Agent 2 Chat App erstellen
 
 #### 2.1) In Dify: Create App -> Chat App.
   - Provider: OpenAI-API-compatible wählen, dein Modell auswählen.
