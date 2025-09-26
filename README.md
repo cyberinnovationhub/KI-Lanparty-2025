@@ -44,9 +44,10 @@ Kurzbeschreibung der verwendeten Software
   - Kopiere .env.example nach .env
 - Start:
   - `docker compose up -d`
+- Admin-Konto anlegen:
+  - http://localhost/install
 - UI öffnen:
-  - http://localhost:3000
-- Admin‑Konto anlegen.
+  - http://localhost/apps
 
 ### 4) Dify mit Ollama verbinden (OpenAI-API-kompatibel) 🔌
 Im Dify‑UI: 
