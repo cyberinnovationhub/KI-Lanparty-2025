@@ -34,5 +34,5 @@
   >   - Erzeuge eine Endzusammenfassung mit: Problemstatement, Annahmen, ausgewählte Idee(n), Prototyp-Plan, Testplan, Risiken/Nächste Schritte.
 - Publish klicken > Publish update > Run App .
 
-### 2) Template exportieren (für die Weitergabe)
+### 3) Template für die Weitergabe exportieren (optional)
 - In der App: Export Template -> Datei sichern (z. B. dify-template.json).
