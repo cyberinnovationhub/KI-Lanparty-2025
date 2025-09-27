@@ -1,29 +1,30 @@
-# 1) Installation KI‑Agent 3 mit Gesprächsführung (Open WebUI + Ollama)
+# 1) Installation KI-Agent 3 mit Gesprächsführung (Open WebUI + Ollama)
 
-### Prerequisites
+### Voraussetzungen
 
 - (für macOS) Homebrew installiert
 - Docker Desktop installiert und laufend
-- Ollama installiert und laufend (+ qwen3:8b und llama3.1:8b runtergeladen)
+- Ollama installiert und laufend (+ qwen3:8b und llama3.1:8b heruntergeladen)
 - macOS/Windows empfohlen
 - README (allgemein) Doku fertig
 
 ## Setup
 
-1. Pull the Open WebUI Image by running `docker pull ghcr.io/open-webui/open-webui:main` into a Terminal Window. 
-    - (for computers with limited storage/bad internet, run the slim version instead `docker pull ghcr.io/open-webui/open-webui:main-slim`).
-2. Run the container with `docker run -d -p 3000:8080 -v open-webui:/app/backend/data --name open-webui ghcr.io/open-webui/open-webui:main`. 
-    - (using the slim version `docker run -d -p 3000:8080 -v open-webui:/app/backend/data --name open-webui ghcr.io/open-webui/open-webui:main-slim`)
-> - If you have a dedicated NVIDIA GPU, run this command instead: `docker run -d -p 3000:8080 --gpus all -v open-webui:/app/backend/data --name open-webui ghcr.io/open-webui/open-webui:cuda`
+1. Hole das Open WebUI-Image, indem du in einem Terminal-Fenster folgendes ausführst:
+   `docker pull ghcr.io/open-webui/open-webui:main`. 
+   - (für Computer mit begrenztem Speicher oder schlechter Internetverbindung nutze die schlankere Version: `docker pull ghcr.io/open-webui/open-webui:main-slim`).
+2. Starte den Container mit folgendem Befehl: 
+   `docker run -d -p 3000:8080 -v open-webui:/app/backend/data --name open-webui ghcr.io/open-webui/open-webui:main`. 
+   - (um die schlanke Version zu nutzen `docker run -d -p 3000:8080 -v open-webui:/app/backend/data --name open-webui ghcr.io/open-webui/open-webui:main-slim`)
+> - Falls du eine dedizierte NVIDIA-GPU hast, nutze stattdessen diesen Befehl: `docker run -d -p 3000:8080 --gpus all -v open-webui:/app/backend/data --name open-webui ghcr.io/open-webui/open-webui:cuda`
 
-3. Access the WebUI via http://localhost:3000
-4. Create an account (first created account will be an administrator account)
-5. Click on your profile picture top-right, go to Settings > General and insert the System Prompt from below, then press 'Save'.
+3. Greife auf die WebUI zu über http://localhost:3000
+4. Lege ein Konto an (das zuerst erstellte Konto ist ein Administrator-konto)
+5. Klicke oben rechts auf dein Profilbild, gehe zu Einstellungen > Allgemein und füge den untenstehenden System-Prompt ein, dann auf „Speichern“ klicken.
 
 <img width="1224" height="816" alt="image" src="https://github.com/user-attachments/assets/b09331d3-dff7-4ef7-9ccd-3a9ac2252188" />
 
-
-### System Prompt
+### System-Prompt
 ```
 Du bist 'Agent 3', ein erfahrener Interviewer im Bereich Frontend-Entwicklung. Dein Stil ist freundlich, professionell, ermutigend und klar. Du führst jedes neue Gespräch als realistische, natürliche Bewerbungssimulation in Deutsch. Halte den Ton locker, aber zielorientiert — wie in einem echten Interview, in dem man sich gegenseitig gut kennenlernt und fachlich prüft.
 
@@ -65,15 +66,15 @@ Timing: Halte die grobe Zeitstruktur ein, bleibe aber flexibel, falls der Kandid
 Abschluss: Bedanke dich für das Gespräch, biete ggf. nächste Schritte an, und beende die Session freundlich.
 ```
 
-6. Under Settings > Audio > TTS Settings, change the Speech Playback Speed to 1.1 - 1.25x, then under 'Set Voice', select one of the voices followed by `(German (Germany))` (so for example `Flo (German (Germany))`). If you don't have any voices with `German(Germany)` at the end (for example when using Safari), just pick any voice. 
+6. Unter Settings > Audio > TTS-Einstellungen die Sprachwiedergabe-Geschwindigkeit auf 1.1 – 1.25x einstellen, dann unter „Stimme festlegen“ eine der Stimmen auswählen, gefolgt von `(German (Germany))` (so zum Beispiel `Flo (German (Germany))`). Falls du keine Stimmen mit `German(Germany)` am Ende hast (z. B. bei der Nutzung von Safari), wähle einfach irgendeine Stimme.
 
-Depending on the browser you use to access the link, you will get different voices. Some are higher quality than others. Safari has the most natural sounding voices out of the box. It is also possible to have 'custom' voices; setting that up is a bit more complex, though.
+Je nach Browser, mit dem du den Link aufrufst, erhältst du unterschiedliche Stimmen. Einige sind qualitativ höher als andere. Safari bietet out-of-the-box die natürlich klingenden Stimmen. Es ist auch möglich, eigene Stimmen zu verwenden; das Einrichten davon ist jedoch etwas komplizierter.
 
 <img width="1237" height="807" alt="image" src="https://github.com/user-attachments/assets/82e74d25-7f56-4448-b300-3d171336507d" />
 
 
-7. Press 'Save' then close the window. Now you should be able to use the voice chat in German, by pressing the soundwave icon on the right side of a new chat.
+7. Klicke auf „Speichern“ und schließe das Fenster. Jetzt solltest du in der Lage sein, die Sprachchats in Deutsch zu verwenden, indem du auf das Sound-Wave-Symbol auf der rechten Seite eines neuen Chats klickst.
 
 <img width="2654" height="376" alt="image" src="https://github.com/user-attachments/assets/0d195b31-f99e-4a06-bf39-cc5e96e3d6e0" />
 
-> Keep in mind that smaller, local models like this one will use your computer's resources for processing, so the answers will be slower and less accurate than you might be used to.
+> Beachte, dass kleinere, lokale Modelle wie dieses die Ressourcen deines Computers nutzen, um die Antworten zu verarbeiten, sodass sie langsamer und weniger exakt sein können, als du es gewohnt bist.
