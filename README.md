@@ -1,9 +1,9 @@
-# README (Allgemein) - KI-Lanparty
-Willkommen zur KI-Lanparty Laborumgebung! 👋 
+# README (Allgemein) - KI-LAN-Party
+Willkommen zur KI-LAN-Party Laborumgebung! 👋 
 
-Dieses Repository führt Sie in die Einrichtung einer sofort einsatzbereiten Demo-Umgebung für eine KI-Lanparty mit drei Prototypen: Zwei KI-Agenten basierend auf einem Low-Code-Framework und einen On-Edge-Sprachassistenten. 
+Dieses Repository führt Sie in die Einrichtung einer sofort einsatzbereiten Demo-Umgebung für eine KI-LAN-Party mit drei Prototypen: Zwei KI-Agenten basierend auf einem Low-Code-Framework und einen On-Edge-Sprachassistenten. 
 
-Die Software läuft lokal auf den Teilnehmerrechnern bzw. bereitgestellter Hardware. Das Setup liefert klare Templates und Anleitunen, damit Teilnehmer selbst Experimente durchführen können.
+Die Software läuft lokal auf den Teilnehmerrechnern bzw. bereitgestellter Hardware. Das Setup liefert klare Templates und Anleitungen, damit Teilnehmer selbst Experimente durchführen können.
 
 ### Kurzbeschreibung der verwendeten Software
 
@@ -51,9 +51,18 @@ Die Software läuft lokal auf den Teilnehmerrechnern bzw. bereitgestellter Hardw
 - UI öffnen:
   - http://localhost:3000 oder `localhost:3000` als URL eingeben und Enter drücken
 - Admin‑Konto anlegen.
+---
 
-> ### Stop here if you want to work with templates (easier and faster) and go to Agent 1 README.
-> ### If you want to learn how to do it yourself, follow the next steps below (more complicated and takes longer)
+> ## 🚦 Wähle: Templates vs. Manuelles Setup
+>
+> **Du willst den schnellsten und einfachsten Einstieg?**  
+> 👉 **Springe direkt zur [Agent 1 README](./Agent_1/README.md) und nutze die fertigen Templates.**
+>
+> **Du möchtest alles selbst lernen und individuell anpassen?**  
+> 👉 **Lies unten weiter für eine Schritt-für-Schritt-Anleitung zum manuellen Setup.**  
+> *(Hinweis: Das ist fortgeschrittener und dauert länger, gibt dir aber volle Kontrolle.)*
+
+---
 
 ### 4) Dify mit Ollama verbinden (OpenAI-API-kompatibel) 🔌
 Im Dify‑UI: 
@@ -79,6 +88,13 @@ Felder ausfüllen (Beispiel: llama3.1:8b):
 - model name for API endpoint: llama3.1:8b  [muss exakt zum Ollama‑Tag passen]
 
 <img width="773" height="1293" alt="image" src="https://github.com/user-attachments/assets/81869b51-e41e-4480-8793-747bfae8fbd3" />
+
+### Häufige Probleme:
+- Manchmal kann es bei Windows im Zusammenspiel von WSL, docker und dify zu Verbindungsproblemen kommen. In diesem Fall hilft:
+  - Setze die Umgebungsvariable OLLAMA_HOST auf `0.0.0.0:11434`
+  - Verwende die URL `http://<WSL-IP>:11434/v1` in Dify
+  - Die WSL-IP findest du mit `ipconfig` in der PowerShell heraus
+  - Danach starte Ollama neu
 
 
 > ### Good job! You finished the initial setup.

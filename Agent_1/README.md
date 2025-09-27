@@ -12,13 +12,12 @@
 
 ## Easy Setup with Template Import
 
-### 1) Download `Agent 1.yml` file from GitHub.
-### 2) Dify Main Page > Create App (left side) > Import DSL file
-### 3) Drag & Drop the `Agent 1.yml` file
-### 4) Create
-### 5) Publish > Publish Update
-
-## Manual Setup (no Template Import)
+1. Lade die Datei `Agent 1.yml` von GitHub herunter.
+2. Gehe auf die Dify-Startseite und wähle in der Kachen "Neue App erstellen" (linke Seite), die Option "DSL-Datei importieren".
+3. Ziehe die Datei `Agent 1.yml` per Drag & Drop in das Importfeld.
+4. Klicke auf "Erstellen".
+5. Falls Plugins fehlen, schlägt dify automatisch vor, diese zu installieren.
+6. Veröffentliche die App über "Veröffentlichen > Update veröffentlichen".
 
 ### 1) Agent 1 Chat App erstellen
 - In Dify: Create App -> Chat App.
