@@ -1,4 +1,4 @@
-# 1) Installation Lokaler KI‑Agent mit Gesprächsführung (Open WebUI + Ollama)
+# 1) Installation KI‑Agent 3 mit Gesprächsführung (Open WebUI + Ollama)
 
 ### Prerequisites
 
@@ -8,7 +8,7 @@
 - macOS/Windows empfohlen
 - README (allgemein) Doku fertig
 
-## Step by Step
+## Setup
 
 1. Pull the Open WebUI Image by running `docker pull ghcr.io/open-webui/open-webui:main` into a Terminal Window. 
     - (for computers with limited storage/bad internet, run the slim version instead `docker pull ghcr.io/open-webui/open-webui:main-slim`).
