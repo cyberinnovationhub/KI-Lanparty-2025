@@ -10,7 +10,7 @@
 - README (allgemein) Doku fertig
 
 
-## Easy Setup with Template Import
+## Easy Setup mit Vorlage-Import
 
 1. Lade die Datei `Agent 1.yml` von GitHub herunter.
 2. Gehe auf die Dify-Startseite und wähle in der Kachen "Neue App erstellen" (linke Seite), die Option "DSL-Datei importieren".
@@ -20,7 +20,7 @@
 6. Veröffentliche die App über "Veröffentlichen > Update veröffentlichen".
 
 
-## Manual Setup (no Template Import)
+## Manuelles Setup (kein Vorlagen-Import)
 
 > **Es ist vorausgesetzt, dass du Punkt 4 aus README (Allgemein) erledigt hast.**
 
