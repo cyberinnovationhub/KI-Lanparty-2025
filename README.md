@@ -1,7 +1,7 @@
 # README (Allgemein) - KI-LAN-Party
-Willkommen zur KI-LAN-Party Laborumgebung! 👋 
+Willkommen zur KI-LAN-Party Arbeitsumgebung! 👋
 
-Dieses Repository führt Sie in die Einrichtung einer sofort einsatzbereiten Demo-Umgebung für eine KI-LAN-Party mit drei Prototypen: Zwei KI-Agenten basierend auf einem Low-Code-Framework und einen On-Edge-Sprachassistenten. 
+Dieses Repository führt Sie in die Einrichtung einer sofort einsatzbereiten Demo-Umgebung für eine KI-LAN-Party mit drei Prototypen: Zwei KI-Agenten basierend auf einem Low-Code-Framework und einen Sprachassistenten.
 
 Die Software läuft lokal auf den Teilnehmerrechnern bzw. bereitgestellter Hardware. Das Setup liefert klare Templates und Anleitungen, damit Teilnehmer selbst Experimente durchführen können.
 
@@ -18,34 +18,34 @@ Die Software läuft lokal auf den Teilnehmerrechnern bzw. bereitgestellter Hardw
 ## Setup
 
 ### 1) Ollama installieren und Modell vorbereiten
-- macOS: Installer von ollama.com / Homebrew installieren, dann -> `brew install ollama`
-- Windows: Installer von ollama.com
+- macOS: Ollama-Installer von ollama.com / Homebrew installieren, dann -> `brew install ollama`
+- Windows: Ollama-Installer von ollama.com
 - Linux: curl-Install gemäß ollama.com
 
-#### 1.1) Sprachmodelle über Terminal ziehen
-  - (via Ollama App UI: folge Step 1.2)
-  - via Terminal Befehl: `ollama pull llama3.1:8b` und danach `ollama pull qwen3:8b`
+#### 1.1) Sprachmodelle über Terminal herunterladen
+  - (über Ollama App UI: folge Schritt 1.2)
+  - über Terminal-Befehl: `ollama pull llama3.1:8b` und danach `ollama pull qwen3:8b`
     - Testen: `ollama list` (zeigt installierte Modelle)
 
-#### 1.2) Sprachmodelle über Ollama UI ziehen
+#### 1.2) Sprachmodelle über Ollama UI herunterladen
 
 - Starte Ollama
 - Suche die gewünschten Modelle (`llama3:8b` und `qwen3:8b`):
   
   <img width="470" height="351" alt="image" src="https://github.com/user-attachments/assets/a4fcb0c1-0ffa-49a9-845c-a9024a7b1e02" />
 
-- Sende eine Nachricht in den Chat, um den Download zu starten
+- Sende eine Nachricht im Chat, um den Download zu starten
 
   <img width="454" height="336" alt="image" src="https://github.com/user-attachments/assets/153270f0-f50a-4bdb-81db-0fca22239f6a" />
 
-- Lade beide Modelle runter (`llama3.1:8b` und `qwen3:8b`)
+- Lade beide Modelle herunter (`llama3.1:8b` und `qwen3:8b`)
   
 ### 3) Dify lokal starten
 - Repository klonen:
   - `git clone https://github.com/langgenius/dify`
 - In den Ordner wechseln, der die docker-compose.yaml enthält (für mehr Infos, siehe Dify‑README).
 - neue .env Datei anlegen:
-  - Kopiere .env.example Inhalt nach .env
+  - Kopiere den Inhalt von .env.example nach .env
 - Start:
   - `docker compose up -d`
 - UI öffnen:
@@ -53,14 +53,14 @@ Die Software läuft lokal auf den Teilnehmerrechnern bzw. bereitgestellter Hardw
 - Admin‑Konto anlegen.
 ---
 
-> ## 🚦 Wähle: Templates vs. Manuelles Setup
+> ## 🚦 Wähle: Vorlagen vs. Manuelles Setup
 >
 > **Du willst den schnellsten und einfachsten Einstieg?**  
-> 👉 **Springe direkt zur [Agent 1 README](./Agent_1/README.md) und nutze die fertigen Templates.**
+> 👉 **Springe direkt zum [Agent 1 README](./Agent_1/README.md) und nutze die fertigen Templates.**
 >
 > **Du möchtest alles selbst lernen und individuell anpassen?**  
 > 👇 **Lies unten weiter für eine Schritt-für-Schritt-Anleitung zum manuellen Setup.**  
-> *(Hinweis: Das ist fortgeschrittener und dauert länger, gibt dir aber volle Kontrolle.)*
+> *(Hinweis: Das ist fortgeschrittener und dauert länger, bietet dir aber volle Kontrolle.)*
 
 ---
 
@@ -71,7 +71,7 @@ Im Dify‑UI:
 
 <img width="911" height="1096" alt="image" src="https://github.com/user-attachments/assets/520be460-85f1-4ed1-aedc-40ec4ae99a15" />
 
-- Modellanbieter -> Nach "OpenAI-API-compatible" suchen -> Modell hinzufügen
+- Modellanbieter -> Suche nach "OpenAI-API-compatible" -> Modell hinzufügen
 
 <img width="1129" height="885" alt="image" src="https://github.com/user-attachments/assets/7d57814e-bad2-4b93-8587-86903e9ffa37" />
 
@@ -90,45 +90,45 @@ Felder ausfüllen (Beispiel: llama3.1:8b):
 <img width="773" height="1293" alt="image" src="https://github.com/user-attachments/assets/81869b51-e41e-4480-8793-747bfae8fbd3" />
 
 ### Häufige Probleme:
-- Manchmal kann es bei Windows im Zusammenspiel von WSL, docker und dify zu Verbindungsproblemen kommen. In diesem Fall hilft:
+- Manchmal kann es bei Windows in der Kombination von WSL, docker und dify zu Verbindungsproblemen kommen. In diesem Fall hilft:
   - Setze die Umgebungsvariable OLLAMA_HOST auf `0.0.0.0:11434`
   - Verwende die URL `http://<WSL-IP>:11434/v1` in Dify
   - Die WSL-IP findest du mit `ipconfig` in der PowerShell heraus
-  - Danach starte Ollama neu
+  - Danach Ollama neu starten
 
 
-> ### Good job! You finished the initial setup.
-> ### You can move on to the Agent_1 README now. 
-> Or, if you're still a bit unsure, you can read the Usage / FAQ Sections below. 👇
+> ### Gut gemacht! Du hast die initiale Einrichtung abgeschlossen.
+> ### Du kannst jetzt zum [Agent 1 README](./Agent_1/README.md) wechseln.
+> Oder, falls du noch etwas unsicher bist, lies die Nutzung- / FAQ-Bereiche unten. 👇
 
 
-## Usage and Configuration
+## Nutzung und Konfiguration
 
-### Chat Format
-- The AI Agent works as a Chat format, meaning every new chat is like a new conversation. You can activate the 'memory' features in the settings so that the Agent remembers things from other chats and conversations, but this uses more resources - and sometimes you might just want to start fresh every time. 
+### Chat-Format
+- Der KI-Agent arbeitet im Chat-Format, das bedeutet, jedes neue Chat ist wie eine neue Unterhaltung. Du kannst die 'Memory'-Funktionen in den Einstellungen aktivieren, damit der Agent sich an Dinge aus anderen Chats und Unterhaltungen erinnert, aber das verbraucht mehr Ressourcen – und manchmal möchte man einfach jedes Mal neu beginnen. 
 
-### Multiple Agents
-- Dify gives you the opportunity to create multiple Agents - meaning that, if you have different use cases, you can create a dedicated Agent for each use case. You can create Agents from the main Dify page (click on the Dify logo).
+### Mehrere Agenten
+- Dify ermöglicht es dir, mehrere Agenten zu erstellen – das bedeutet, dass du für verschiedene Anwendungsfälle je einen dedizierten Agenten erstellen kannst. Du kannst Agenten von der Haupt-Dify-Seite aus erstellen (klicke auf das Dify-Logo).
 
-### How to write prompts (Prompt engineering)
-- You can change the prompt however you like. The current prompt is just an example. Your AI Agent could be a lawyer, teacher, strategist, or anything else. Just keep in mind that, the more detailed context you give it, the better and more accurate it will be. Imagine this is a person living far away that doesn't know anything about you or what you're trying to do. And you're chatting online with this person (who is an expert on many things), so you need to give them a detailed background of the problem.
+### Wie man Prompts schreibt (Prompt-Engineering)
+- Du kannst den Prompt ändern so wie du möchtest. Der aktuelle Prompt ist nur ein Beispiel. Dein KI-Agent könnte ein Anwalt, Lehrer, Stratege oder etwas anderes sein. Bedenke, dass je detaillierter der Kontext ist, desto besser und genauer wird er sein. Stell dir vor, dies ist eine Person, die weit entfernt lebt und nichts über dich oder dein Vorhaben weiß. Und du chattest online mit dieser Person (die Experte in vielen Bereichen ist), also musst du dieser Person einen detaillierten Hintergrund des Problems geben.
 
-### Placeholder template prompt
-- If you need a placeholder template as a starter prompt, you can use the AUTOMAT framework, but there are many you can find online. Here you will find some basic ones: https://medium.com/the-generator/the-perfect-prompt-prompt-engineering-cheat-sheet-d0b9c62a2bba
+### Platzhalter-Template-Prompt
+- Falls du eine Platzhalter-Template als Starter-Prompt benötigst, kannst du das AUTOMAT-Framework verwenden, es gibt aber viele, die du online finden kannst. Hier findest du einige grundlegende Beispiele: https://medium.com/the-generator/the-perfect-prompt-prompt-engineering-cheat-sheet-d0b9c62a2bba
 
-### Variables
-- You can add variables for the prompt. Inside the prompt text, just add two curly brackets with a variable name inbetween (`{{name}}`) and then add it as a variable in the Dify menu below the prompt text. Depending on how you included the variable inside your prompt, the Agent will use that variable accordingly. A simple example you can test is telling it to call you by your name. (`Call me by my name {{name}}`).
+### Variablen
+- Du kannst Variablen für den Prompt hinzufügen. Innerhalb des Prompt-Texts fügst du einfach zwei geschweifte Klammern mit einem Variablennamen dazwischen (`{{name}}`) hinzu und fügst es anschließend als Variable im Dify-Menü unter dem Prompt-Text hinzu. Abhängig davon, wie du die Variable in deinem Prompt eingebunden hast, wird der Agent diese Variable entsprechend verwenden. Ein einfaches Beispiel zum Testen: `Nenne mich bei meinem Namen {{name}}`.
 
-### Uploading documents
-- It is possible to upload documents that the AI Agent will later use as an information source. This would be useful, for example, if you had a large PDF file with lots of information about a certain topic. You could upload it and ask the AI specific questions about the topic. Or summarize the whole document. Or improve the spelling and grammar. There are many use cases.
-- To do this, you have to go to the Main Menu Knowledge Tab (top bar) > Create Knowledge > Import from file > Select/Drag&Drop your file > Next > High Quality > Save & Process. After you upload it there, you can go to your chat in studio view, Knowledge Dropdown on the left side (not top bar), and just select the document you uploaded earlier. Now, the AI Agent will know everything inside that document.
+### Hochladen von Dokumenten
+- Es ist möglich, Dokumente hochzuladen, die der KI-Agent später als Informationsquelle verwenden wird. Das wäre z. B. nützlich, wenn du eine große PDF-Datei mit vielen Informationen zu einem bestimmten Thema hast. Du könntest sie hochladen und dem KI-System konkrete Fragen zum Thema stellen. Oder das gesamte Dokument zusammenfassen. Oder Rechtschreibung und Grammatik verbessern. Es gibt viele Anwendungsfälle.
+- Um dies zu tun, gehe zum Knowledge-Tab im Hauptmenü (obere Leiste) > Knowledge erstellen > Import from file > Datei auswählen/Drag&Drop > Weiter > Hochwertig > Speichern & Verarbeiten. Nachdem du es dort hochgeladen hast, kannst du in deinem Chat in der Studio-Ansicht das Knowledge-Dropdown links (nicht oben in der Leiste) verwenden und einfach das zuvor hochgeladene Dokument auswählen. Nun kennt der KI-Agent alles, was in diesem Dokument steht.
 
-### Other features
-- There are many other possible features that take a bit more time to set up (e.g. Vision feature to analyse uploaded Images). If you have some experience and have the extra time, you can try setting them up. 
+### Weitere Funktionen
+- Es gibt viele weitere mögliche Funktionen, die etwas mehr Zeit für die Einrichtung benötigen (z. B. Vision-Funktion zur Analyse hochgeladener Bilder). Wenn du etwas Erfahrung hast und die zusätzliche Zeit investieren möchtest, kannst du versuchen, sie einzurichten.
 
-### Limitations
-- There are limitations when it comes to the amount of information the AI Agent can process. If you chat to the Agent for long enough, it will start to forget what you talked about in the beginning, and might get confused halfway through. Also, if you upload documents for the AI to use as a source of information, and the documents are too large, the AI Agent might also forget things or lose context. You can learn the exact limitations via trial and error.
-- The AI Agents are not perfect and they often hallucinate. So you definitely need to double check the information you get from them, since they will confidently give you wrong answers.
+### Einschränkungen
+- Es gibt Einschränkungen hinsichtlich der Menge an Informationen, die der KI-Agent verarbeiten kann. Wenn du lange genug mit dem Agenten chatst, fängt er an zu vergessen, worüber du am Anfang gesprochen hast, und könnte im Verlauf verwirren. Wenn du außerdem Dokumente hochlädst, die der KI-Agent als Informationsquelle verwenden soll und die Dokumente zu groß sind, könnte der Agent ebenfalls Dinge vergessen oder Kontext verlieren. Du kannst die genauen Grenzen durch Ausprobieren herausfinden.
+- Die KI-Agenten sind nicht perfekt und sie "halluzinieren" oft. Du solltest die von ihnen erhaltenen Informationen daher unbedingt überprüfen, da sie dir falsche Antworten geben könnten.
 
 
 ## FAQ & Troubleshooting 🧩
