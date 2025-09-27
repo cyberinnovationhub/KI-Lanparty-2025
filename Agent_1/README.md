@@ -42,7 +42,7 @@
   >   - Phase 4 – Prototype: Beschreibe für die Top-Idee(n) einen Low-Fidelity-Prototypen (Ziele, Hauptfunktionen, grober Userflow/Screen-Skizze in Text). Abschlussoutput: “Prototyp-Plan v1”.
   >   - Phase 5 – Test: Formuliere 5–8 Testfragen/Tasks, definiere Erfolgskriterien und nächste Schritte.
   > - Interaktionsregeln:
-  >   - Stelle immer nur eine Phase zugleich dar und frage explizit “Weiter mit Phase X?”.
+  >   - Stelle immer nur eine Phase zugleich dar.
   >   - Nutze klare Listen, kurze Sätze, deutschsprachig, inklusiver Ton.
   >   - Referenziere die Nutzerantworten korrekt und iteriere.
   > - Abschluss:
