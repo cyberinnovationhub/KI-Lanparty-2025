@@ -39,18 +39,28 @@ Die Software läuft lokal auf den Teilnehmerrechnern bzw. bereitgestellter Hardw
   <img width="454" height="336" alt="image" src="https://github.com/user-attachments/assets/153270f0-f50a-4bdb-81db-0fca22239f6a" />
 
 - Lade beide Modelle herunter (`llama3.1:8b` und `qwen3:8b`)
+
+### 2) Docker Desktop installieren (von docker.com)
+- Runterladen, installieren und starten
+> **Bei MacBooks kommt manchmal eine Fehlermeldung, dass Rosetta installiert werden muss. Einfach aufs Fenster klicken, dann auf Installieren gehen. Falls eine Fehlermeldung kommt, einfach jedes mal auf 'Retry' gehen. Wenn sich Docker geschlossen hat, heißt es, Rosetta wurde erfolgreich installiert. Docker noch mal manuell starten.**
   
 ### 3) Dify lokal starten
 - Repository klonen:
   - `git clone https://github.com/langgenius/dify`
-- In den Ordner wechseln, der die docker-compose.yaml enthält (für mehr Infos, siehe Dify‑README).
-- neue .env Datei anlegen:
+- In den Ordner wechseln, der die docker-compose.yaml enthält `cd dify/docker` (für mehr Infos, siehe Dify‑README).
+- neue .env Datei anlegen(oder .env.example Datei duplizieren und Namen ändern):
+  - falls man die Datei manuell erstellen will im Finder/Explorer, muss man erst versteckte Dataien anzeigen lassen. 
+    - MacBook: Command + Shift + . (Punkt)
+    - Windows: File Explorer öffnen mit Windows-Taste + E > Ansicht/View > Anzeige Versteckter Inhalte klicken
   - Kopiere den Inhalt von .env.example nach .env
 - Start:
   - `docker compose up -d`
 - UI öffnen:
-  - http://localhost:3000 oder `localhost:3000` als URL eingeben und Enter drücken
+  - http://localhost:3000 oder einfach `localhost` als URL eingeben und Enter drücken
 - Admin‑Konto anlegen.
+> Im Hintergrund läuft ein Docker Container; hier wird Dify gehostet. Um den Container zu stoppen, einfach Docker Desktop öffnen > Containers > und den Container namens `docker` stoppen (auf den Stopp-Button klicken unter Actions).
+> Um den Container wieder zu starten, einfach auf den Start Button klicken unter Actions.
+
 ---
 
 > ## 🚦 Wähle: Vorlagen vs. Manuelles Setup
