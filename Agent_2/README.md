@@ -12,13 +12,18 @@
 
 ## Easy Setup with Template Import
 
-### 1) Download `Agent 2.yml` file from GitHub.
-### 2) Dify Main Page > Create App (left side) > Import DSL file
-### 3) Drag & Drop the `Agent 2.yml` file
-### 4) Create
-### 5) Publish > Publish Update
+1. Lade die Datei `Agent 2.yml` von GitHub herunter.
+2. Gehe auf die Dify-Startseite und wähle in der Kachen "Neue App erstellen" (linke Seite), die Option "DSL-Datei importieren".
+3. Ziehe die Datei `Agent 2.yml` per Drag & Drop in das Importfeld.
+4. Klicke auf "Erstellen".
+5. Falls Plugins fehlen, schlägt dify automatisch vor, diese zu installieren.
+6. Veröffentliche die App über "Veröffentlichen > Update veröffentlichen".
 
 ## Manual Setup (no Template Import)
+
+> **Es ist vorausgesetzt, dass du Punkt 4 aus README (Allgemein) erledigt hast.**
+
+> **👉 Falls nicht, springe zurück zu [README(Allgemein)](../README.md) Punkt 4.**
 
 ### 1) Dify mit Ollama verbinden
 

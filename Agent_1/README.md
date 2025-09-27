@@ -7,7 +7,7 @@
 - Ollama (und die Modelle llama3.1:8b und qwen3:8b) installiert
 - macOS/Windows empfohlen. Linux geht auch (siehe Dify Doku für Linux).
 - (für macOS) Homebrew installiert
-- README (Allgemein) fertig
+- README (allgemein) Doku fertig
 
 
 ## Easy Setup with Template Import
@@ -18,6 +18,14 @@
 4. Klicke auf "Erstellen".
 5. Falls Plugins fehlen, schlägt dify automatisch vor, diese zu installieren.
 6. Veröffentliche die App über "Veröffentlichen > Update veröffentlichen".
+
+
+## Manual Setup (no Template Import)
+
+> **Es ist vorausgesetzt, dass du Punkt 4 aus README (Allgemein) erledigt hast.**
+
+> **👉 Falls nicht, springe zurück zu [README(Allgemein)](../README.md) Punkt 4.**
+
 
 ### 1) Agent 1 Chat App erstellen
 - In Dify: Create App -> Chat App.

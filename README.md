@@ -18,13 +18,13 @@ Die Software läuft lokal auf den Teilnehmerrechnern bzw. bereitgestellter Hardw
 ## Setup
 
 ### 1) Ollama installieren und Modell vorbereiten
-- macOS: `brew install ollama` / Installer von ollama.com
+- macOS: Installer von ollama.com / Homebrew installieren, dann -> `brew install ollama`
 - Windows: Installer von ollama.com
 - Linux: curl-Install gemäß ollama.com
 
 #### 1.1) Sprachmodelle über Terminal ziehen
-  - via Ollama App UI: folge Step 1.2
-  - via Terminal Befehl: `ollama pull llama3.1:8b` und danach`ollama pull qwen3:8b`
+  - (via Ollama App UI: folge Step 1.2)
+  - via Terminal Befehl: `ollama pull llama3.1:8b` und danach `ollama pull qwen3:8b`
     - Testen: `ollama list` (zeigt installierte Modelle)
 
 #### 1.2) Sprachmodelle über Ollama UI ziehen
@@ -34,7 +34,7 @@ Die Software läuft lokal auf den Teilnehmerrechnern bzw. bereitgestellter Hardw
   
   <img width="470" height="351" alt="image" src="https://github.com/user-attachments/assets/a4fcb0c1-0ffa-49a9-845c-a9024a7b1e02" />
 
-- Tippe eine Nachricht in den Chat, um den Download zu starten
+- Sende eine Nachricht in den Chat, um den Download zu starten
 
   <img width="454" height="336" alt="image" src="https://github.com/user-attachments/assets/153270f0-f50a-4bdb-81db-0fca22239f6a" />
 
@@ -43,7 +43,7 @@ Die Software läuft lokal auf den Teilnehmerrechnern bzw. bereitgestellter Hardw
 ### 3) Dify lokal starten
 - Repository klonen:
   - `git clone https://github.com/langgenius/dify`
-- In den Ordner wechseln, der die docker-compose.yaml enthält (siehe Dify‑README).
+- In den Ordner wechseln, der die docker-compose.yaml enthält (für mehr Infos, siehe Dify‑README).
 - neue .env Datei anlegen:
   - Kopiere .env.example Inhalt nach .env
 - Start:
@@ -59,7 +59,7 @@ Die Software läuft lokal auf den Teilnehmerrechnern bzw. bereitgestellter Hardw
 > 👉 **Springe direkt zur [Agent 1 README](./Agent_1/README.md) und nutze die fertigen Templates.**
 >
 > **Du möchtest alles selbst lernen und individuell anpassen?**  
-> 👉 **Lies unten weiter für eine Schritt-für-Schritt-Anleitung zum manuellen Setup.**  
+> 👇 **Lies unten weiter für eine Schritt-für-Schritt-Anleitung zum manuellen Setup.**  
 > *(Hinweis: Das ist fortgeschrittener und dauert länger, gibt dir aber volle Kontrolle.)*
 
 ---
@@ -78,14 +78,14 @@ Im Dify‑UI:
 
 Felder ausfüllen (Beispiel: llama3.1:8b):
 - Model Type: LLM
-- Model Name: llama3.1:8b
-- Authorization Name: Authorization
-- Model display name: Llama 3.1 8B (Ollama)  [frei wählbar]
-- API Key: ollama  [beliebiger String, wird von Ollama nicht geprüft]
+- Model Name: `llama3.1:8b`
+- Authorization Name: `Authorization`
+- Model display name: `Llama 3.1 8B (Ollama)`  [frei wählbar]
+- API Key: `ollama`  [beliebiger String, wird von Ollama nicht geprüft]
 - API endpoint URL:
   - macOS/Windows: http://host.docker.internal:11434/v1
   - Linux: http://172.17.0.1:11434/v1 (oder das Gateway aus docker network inspect bridge)
-- model name for API endpoint: llama3.1:8b  [muss exakt zum Ollama‑Tag passen]
+- model name for API endpoint: `llama3.1:8b`  [muss exakt zum Ollama‑Tag passen]
 
 <img width="773" height="1293" alt="image" src="https://github.com/user-attachments/assets/81869b51-e41e-4480-8793-747bfae8fbd3" />
 
@@ -99,7 +99,7 @@ Felder ausfüllen (Beispiel: llama3.1:8b):
 
 > ### Good job! You finished the initial setup.
 > ### You can move on to the Agent_1 README now. 
-> Or, if you're still a bit unsure, you can read the Usage / FAQ Sections below.
+> Or, if you're still a bit unsure, you can read the Usage / FAQ Sections below. 👇
 
 
 ## Usage and Configuration
@@ -159,7 +159,7 @@ Felder ausfüllen (Beispiel: llama3.1:8b):
   - Ja. Beides ist YAML. Docker Compose akzeptiert beide. Falls der Dateiname abweicht, nutze docker compose -f datei.yaml up -d
 
 - Responses sind langsam.
-  - Kleinere Modelle nutzen (z. B. qwen2.5:7b-instruct).
+  - Kleinere Modelle nutzen.
   - In Dify die Max‑Token reduzieren.
   - Genug RAM/CPU sicherstellen.
 
