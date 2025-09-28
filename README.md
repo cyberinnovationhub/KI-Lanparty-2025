@@ -61,18 +61,6 @@ Die Software läuft lokal auf den Teilnehmerrechnern bzw. bereitgestellter Hardw
 > Im Hintergrund läuft ein Docker Container; hier wird Dify gehostet. Um den Container zu stoppen, einfach Docker Desktop öffnen > Containers > und den Container namens `docker` stoppen (auf den Stopp-Button klicken unter Actions).
 > Um den Container wieder zu starten, einfach auf den Start Button klicken unter Actions.
 
----
-
-> ## 🚦 Wähle: Vorlagen vs. Manuelles Setup
->
-> **Du willst den schnellsten und einfachsten Einstieg?**  
-> 👉 **Springe direkt zum [Agent 1 README](./Agent_1/README.md) und nutze die fertigen Templates.**
->
-> **Du möchtest alles selbst lernen und individuell anpassen?**  
-> 👇 **Lies unten weiter für eine Schritt-für-Schritt-Anleitung zum manuellen Setup.**  
-> *(Hinweis: Das ist fortgeschrittener und dauert länger, bietet dir aber volle Kontrolle.)*
-
----
 
 ### 4) Dify mit Ollama verbinden (OpenAI-API-kompatibel) 🔌
 Im Dify‑UI: 
@@ -107,9 +95,17 @@ Felder ausfüllen (Beispiel: llama3.1:8b):
   - Danach Ollama neu starten
 
 
-> ### Gut gemacht! Du hast die initiale Einrichtung abgeschlossen.
-> ### Du kannst jetzt zum [Agent 1 README](./Agent_1/README.md) wechseln.
-> Oder, falls du noch etwas unsicher bist, lies die Nutzung- / FAQ-Bereiche unten. 👇
+---
+
+> ## 🚦 Gut gemacht! Du hast die initiale Einrichtung abgeschlossen.
+>
+> **Du willst den schnellsten und einfachsten Einstieg?**  
+> 👉 **Springe direkt zum [Agent 1 README](./Agent_1/README.md) und nutze die fertigen Templates.**
+>  
+> 👇 **Oder, falls du noch etwas unsicher bist, lies die Nutzung- / FAQ-Bereiche unten.**  
+> *(Hinweis: Das ist fortgeschrittener und dauert länger, bietet dir aber volle Kontrolle.)*
+
+---
 
 
 ## Nutzung und Konfiguration

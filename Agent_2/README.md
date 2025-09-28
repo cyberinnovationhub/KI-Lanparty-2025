@@ -10,29 +10,6 @@
 
 ## Easy Setup mit Vorlage-Import
 
-1. Lade die Datei `Agent 2.yml` von GitHub herunter.
-2. Gehe auf die Dify-Startseite und wähle in der Kachel "Neue App erstellen" (linke Seite), die Option "DSL-Datei importieren".
-3. Ziehe die Datei `Agent 2.yml` per Drag & Drop in das Importfeld.
-4. Klicke auf "Erstellen".
-5. Falls Plugins fehlen, schlägt Dify automatisch vor, diese zu installieren.
-6. Veröffentlicht die App über "Veröffentlichen > Update veröffentlichen".
-7. PDF-Dokumente hochladen (für RAG)
-    - Klicke auf die Schaltfläche 'Knowledge' in der oberen mittleren Leiste (3. Schaltfläche)
-    - (+) Create Knowledge
-    - Ziehe die Dokumentationsdateien für Agent 1, Agent 3, die Leistungsbeschreibung-Dokumentation und die README(Allgemein) per Drag & Drop hinein.
-    - Weiter > Index-Methode `Economical` (`High quality` ist zwar besser, erfordert jedoch eine Verbindung zu Azure OpenAI, was teure Tokens verwendet)
-    - Speichern & Verarbeiten
-8. Hochgeladene Dokumente innerhalb des Agents nutzen
-    - Startseite (auf das Dify-Logo klicken) -> Agent 2
-    - unter Knowledge (im Agentenfenster, diesmal nicht in der oberen Leiste) -> (+)Hinzufügen -> Alle vorhin hochgeladenen Dokumente auswählen -> Button Hinzufügen
-9. App noch mal veröffentlichen über "Veröffentlichen > Update veröffentlichen"
-
-## Manuelles Setup (kein Vorlagen-Import)
-
-> **Es ist vorausgesetzt, dass du Punkt 4 aus README (Allgemein) erledigt hast.**
-
-> **👉 Falls nicht, springe zurück zu [README(Allgemein)](../README.md) Punkt 4.**
-
 ### 1) Dify mit Ollama verbinden
 
 #### 1.1) Im Dify‑UI: rechts oben auf Profilbild klicken -> Settings -> Model Providers -> Azure OpenAI Service Model -> Add model
@@ -46,12 +23,37 @@
 - API Version: `2025-01-01-preview`
 - Base Model: `gpt-4o`
 
-### 2) Agent 2 Chat App erstellen
+### 2) Agent Vorlage importieren und konfigurieren
 
-#### 2.1) In Dify: App erstellen -> Chat App.
+#### 2.1) Lade die Datei `Agent 2.yml` von GitHub herunter.
+#### 2.2) Gehe auf die Dify-Startseite und wähle in der Kachel "Neue App erstellen" (linke Seite), die Option "DSL-Datei importieren".
+#### 2.3) Ziehe die Datei `Agent 2.yml` per Drag & Drop in das Importfeld.
+#### 2.4) Klicke auf "Erstellen".
+#### 2.5) Falls Plugins fehlen, schlägt Dify automatisch vor, diese zu installieren.
+#### 2.6) Veröffentlicht die App über "Veröffentlichen > Update veröffentlichen".
+#### 2.7) PDF-Dokumente hochladen (für RAG)
+    - Klicke auf die Schaltfläche 'Knowledge' in der oberen mittleren Leiste (3. Schaltfläche)
+    - (+) Create Knowledge
+    - Ziehe die Dokumentationsdateien für Agent 1, Agent 3, die Leistungsbeschreibung-Dokumentation und die README(Allgemein) per Drag & Drop hinein.
+    - Weiter > Index-Methode `Economical` (`High quality` ist zwar besser, erfordert jedoch eine Verbindung zu Azure OpenAI, was teure Tokens verwendet)
+    - Speichern & Verarbeiten
+#### 2.8) Hochgeladene Dokumente innerhalb des Agents nutzen
+    - Startseite (auf das Dify-Logo klicken) -> Agent 2
+    - unter Knowledge (im Agentenfenster, diesmal nicht in der oberen Leiste) -> (+)Hinzufügen -> Alle vorhin hochgeladenen Dokumente auswählen -> Button Hinzufügen
+#### 2.9) App noch mal veröffentlichen über "Veröffentlichen > Update veröffentlichen"
+
+## Manuelles Setup (kein Vorlagen-Import)
+
+> **Es ist vorausgesetzt, dass du Punkt 4 aus README (Allgemein) erledigt hast.**
+
+> **👉 Falls nicht, springe zurück zu [README(Allgemein)](../README.md) Punkt 4.**
+
+### 1) Agent 2 Chat App erstellen
+
+#### 1.1) In Dify: App erstellen -> Chat App.
   - Provider: OpenAI-API-kompatibel auswählen, dein Modell auswählen.
   - Knowledge/RAG: nicht hinzufügen bzw. deaktiviert lassen.
-#### 2.2) System Prompt einfügen (und bei Bedarf anpassen):
+#### 1.2) System Prompt einfügen (und bei Bedarf anpassen):
 ```
 Rolle und Mission:
 Du bist ein Dokumentations-Experte und AI-Coach, genannt 'Agent 2'.
@@ -137,18 +139,18 @@ Abschließende Erinnerung:
 - Zitiere immer Quellen, wenn du dich auf hochgeladene Dokumentation stützt.
 - Bevorzuge praxisnahe Schritte, möglichst wenig Jargon und klare Abwägungen.
 ```
-#### 2.3) PDF-Dokumente hochladen (für RAG)
+#### 1.3) PDF-Dokumente hochladen (für RAG)
   - Klicke auf die Schaltfläche 'Knowledge' in der oberen mittleren Leiste (3. Schaltfläche)
   - (+) Create Knowledge
   - Ziehe die Dokumentationsdateien für Agent 1, Agent 3 und die Leistungsbeschreibung-Dokumentation per Drag & Drop hinein.
   - Weiter > Index-Methode `Economical` (`High quality` ist zwar besser, erfordert jedoch eine Verbindung zu Azure OpenAI, was teure Tokens verwendet)
   - Speichern & Verarbeiten
 
-#### 2.4) Hochgeladene Dokumente innerhalb des Agents nutzen
+#### 1.4) Hochgeladene Dokumente innerhalb des Agents nutzen
   - Startseite (auf das Dify-Logo klicken) -> Agent 2
   - unter Knowledge (im Agentenfenster, diesmal nicht in der oberen Leiste) -> (+)Hinzufügen -> Alle vorhin hochgeladenen Dokumente auswählen -> Button Hinzufügen
 
-#### 2.5) Veröffentlichen klicken > Update veröffentlichen > App ausführen
+#### 1.5) Veröffentlichen klicken > Update veröffentlichen > App ausführen
 
-### 3) Template für die Weitergabe exportieren (optional)
+### 2) Template für die Weitergabe exportieren (optional)
 - In der App: Vorlage exportieren -> Datei sichern (z. B. dify-template.json).
