@@ -16,6 +16,16 @@
 4. Klicke auf "Erstellen".
 5. Falls Plugins fehlen, schlägt Dify automatisch vor, diese zu installieren.
 6. Veröffentlicht die App über "Veröffentlichen > Update veröffentlichen".
+7. PDF-Dokumente hochladen (für RAG)
+    - Klicke auf die Schaltfläche 'Knowledge' in der oberen mittleren Leiste (3. Schaltfläche)
+    - (+) Create Knowledge
+    - Ziehe die Dokumentationsdateien für Agent 1, Agent 3, die Leistungsbeschreibung-Dokumentation und die README(Allgemein) per Drag & Drop hinein.
+    - Weiter > Index-Methode `Economical` (`High quality` ist zwar besser, erfordert jedoch eine Verbindung zu Azure OpenAI, was teure Tokens verwendet)
+    - Speichern & Verarbeiten
+8. Hochgeladene Dokumente innerhalb des Agents nutzen
+    - Startseite (auf das Dify-Logo klicken) -> Agent 2
+    - unter Knowledge (im Agentenfenster, diesmal nicht in der oberen Leiste) -> (+)Hinzufügen -> Alle vorhin hochgeladenen Dokumente auswählen -> Button Hinzufügen
+9. App noch mal veröffentlichen über "Veröffentlichen > Update veröffentlichen"
 
 ## Manuelles Setup (kein Vorlagen-Import)
 
@@ -134,9 +144,9 @@ Abschließende Erinnerung:
   - Weiter > Index-Methode `Economical` (`High quality` ist zwar besser, erfordert jedoch eine Verbindung zu Azure OpenAI, was teure Tokens verwendet)
   - Speichern & Verarbeiten
 
-#### 2.4) Dokumente innerhalb des Agents nutzen
+#### 2.4) Hochgeladene Dokumente innerhalb des Agents nutzen
   - Startseite (auf das Dify-Logo klicken) -> Agent 2
-  - unter Knowledge (im Agentenfenster, diesmal nicht in der oberen Leiste) -> (+)Hinzufügen -> Alle hochgeladenen Dokumente auswählen -> Button Hinzufügen
+  - unter Knowledge (im Agentenfenster, diesmal nicht in der oberen Leiste) -> (+)Hinzufügen -> Alle vorhin hochgeladenen Dokumente auswählen -> Button Hinzufügen
 
 #### 2.5) Veröffentlichen klicken > Update veröffentlichen > App ausführen
 
