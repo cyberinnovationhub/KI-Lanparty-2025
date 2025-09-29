@@ -17,7 +17,7 @@ Die Software läuft lokal auf den Teilnehmerrechnern bzw. bereitgestellter Hardw
 - **[Docker](https://docs.docker.com/)**: Container-Plattform, die Anwendungen inklusive ihrer Abhängigkeiten in isolierten Containern verpackt
 - **[Dify](https://docs.dify.ai/en/introduction)**: Low-Code-Framework zur Erstellung KI-gesteuerter Prototypen
 - **[Open WebUI](https://docs.openwebui.com/)**: Grafische Oberfläche zur Interaktion mit lokal laufenden Modellen
-- **[Ollama](https://docs.ollama.com/)**: Lokaler Runner zur Bereitstellung von Modellen (z.B. `llama3:8b`, `qwen3:8b`)
+- **[Ollama](https://docs.ollama.com/)**: Lokaler Runner zur Bereitstellung von Modellen (z.B. `llama3.1:8b`, `qwen3:8b`)
 
 ## Grundlegendes Setup
 
@@ -46,7 +46,7 @@ ollama list
 
 Option 2 - Ollama UI:
 1. Starte Ollama
-2. Suche die gewünschten Modelle (`llama3:8b` und `qwen3:8b`)
+2. Suche die gewünschten Modelle (`llama3.1:8b` und `qwen3:8b`)
   
    ![Ollama Modell suchen](https://github.com/user-attachments/assets/a4fcb0c1-0ffa-49a9-845c-a9024a7b1e02)
 
