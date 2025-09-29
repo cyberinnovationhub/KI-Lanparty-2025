@@ -1,59 +1,60 @@
-# I) Installation KI‑Agent 2 mit RAG (Dify + Ollama) ✨
+# Agent 2: Dokumentations-Experte mit RAG
 
-### Voraussetzungen
-- Docker Desktop installiert und laufend
-- Git installiert
-- Ollama (und die Modelle llama3.1:8b und qwen3:8b) installiert
-- macOS/Windows empfohlen. Linux geht auch (siehe Dify-Doku für Linux).
-- (für macOS) Homebrew installiert
-- README (Allgemein) Doku fertig
+KI-Agent mit Zugriff auf die Dokumentation aller anderen Agenten über RAG (Retrieval-Augmented Generation).
 
-## Easy Setup mit Vorlage-Import
+## Voraussetzungen
 
-### 1) Dify mit Ollama verbinden
+- ✅ [Grundlegendes Setup](../README.md) abgeschlossen
+- ✅ Docker Desktop läuft
+- ✅ Ollama läuft und die Modelle `llama3.1:8b` und `qwen3:8b` sind heruntergeladen
+- ✅ Dify ist mit Ollama verbunden
 
-#### 1.1) Im Dify‑UI: rechts oben auf Profilbild klicken -> Settings -> Model Providers -> Azure OpenAI Service Model -> Add model
+## Model Provider Setup
 
-#### 1.2) Felder ausfüllen:
-- Deployment Name: `ai-lanparty`
-- Model Type: LLM
-- Authorization Name: `Authorization GPT-4o`
-- API Endpoint URL: https://ai-lanparty.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2025-01-01-preview
-- API Key: vor Ort fragen
-- API Version: `2025-01-01-preview`
-- Base Model: `gpt-4o`
+Bei Agent 2 wollen wir neben den lokalen Modellen, die wir mit Ollama hosten zusätzlich die besonders performanten OpenAI-Modelle verwenden. Diese Modelle sind in Microsoft Azure gehostet. Die Kosten berechnen sich aus dem Token-Verbrauch ([~1-10€/1Mio Token je nach Modell)](https://azure.microsoft.com/de-de/pricing/details/cognitive-services/openai-service/#pricing)).
 
-### 2) Agent Vorlage importieren und konfigurieren
+### Azure OpenAI in dify einrichten
 
-#### 2.1) Lade die Datei `Agent 2.yml` von GitHub herunter.
-#### 2.2) Gehe auf die Dify-Startseite und wähle in der Kachel "Neue App erstellen" (linke Seite), die Option "DSL-Datei importieren".
-#### 2.3) Ziehe die Datei `Agent 2.yml` per Drag & Drop in das Importfeld.
-#### 2.4) Klicke auf "Erstellen".
-#### 2.5) Falls Plugins fehlen, schlägt Dify automatisch vor, diese zu installieren.
-#### 2.6) Veröffentlicht die App über "Veröffentlichen > Update veröffentlichen".
-#### 2.7) PDF-Dokumente hochladen (für RAG) - siehe [README(Allgemein)](../README.md) > Nutzung und Konfiguration > Hochladen von Dokumenten
-    - Klicke auf die Schaltfläche 'Wissen' in der oberen mittleren Leiste (3. Schaltfläche)
-    - (+) Wissen erstellen
-    - Ziehe die Dokumentationsdateien für Agent 1, Agent 3, die Leistungsbeschreibung-Dokumentation und die README(Allgemein) per Drag & Drop hinein.
-    - Weiter > Indexmodus `Ökonomisch` (`Hohe Qualität` ist zwar besser, erfordert jedoch eine Verbindung zu Azure OpenAI, was teure Tokens verwendet)
-    - Speichern & Verarbeiten
-#### 2.8) Hochgeladene Dokumente innerhalb des Agents nutzen
-    - Startseite (auf das Dify-Logo klicken) -> Agent 2
-    - unter Kontext (im Agentenfenster, diesmal nicht in der oberen Leiste) -> (+)Hinzufügen -> Alle vorhin hochgeladenen Dokumente auswählen -> Button Hinzufügen
-#### 2.9) App noch mal veröffentlichen über "Veröffentlichen > Update veröffentlichen"
+1. **Dify UI**: Profilbild → **Settings** → **Model Providers** → **Azure OpenAI Service**
+2. **Konfiguration**:
+   - **Deployment Name**: `ai-lanparty`
+   - **Model Type**: `LLM`
+   - **Authorization Name**: `Authorization GPT-4o`
+   - **API Endpoint URL**: `https://ai-lanparty.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2025-01-01-preview`
+   - **API Key**: Bei Event-Veranstalter erfragen
+   - **API Version**: `2025-01-01-preview`
+   - **Base Model**: `gpt-4o`
 
-## Manuelles Setup (kein Vorlagen-Import)
+## Schnelles Agent-Setup (Template-Import)
 
-> **Es ist vorausgesetzt, dass du Punkt 4 aus README (Allgemein) erledigt hast.**
+1. **Template herunterladen**: [`Agent 2.yml`](./Agent%202.yml)
 
-> **👉 Falls nicht, springe zurück zu [README(Allgemein)](../README.md) Punkt 4.**
+2. **In Dify importieren**:
+   - Dify-Startseite → **Create new app** → **Import DSL file**
+   - `Agent 2.yml` per Drag & Drop hineinziehen
 
-### 1) Agent 2 Chat App erstellen
+3. **Knowledge Base einrichten**:
+   - **Knowledge** → **Create Knowledge**
+   - Markdown-Files aus diesem Repo oder die Dokumentations-PDFs aus dem `Knowledge/` Ordner hochladen:
+     - `README(Allgemein).pdf`
+     - `README Agent 1.pdf`
+     - `README Agent 3.pdf`
+   - **Index Mode**: `Economical`
+   - **Save & Process**
 
-#### 1.1) In Dify: App erstellen -> Chat App.
-  - Provider: OpenAI-API-kompatibel auswählen, dein Modell auswählen.
-  - Knowledge/RAG: nicht hinzufügen bzw. deaktiviert lassen.
-#### 1.2) System Prompt einfügen (und bei Bedarf anpassen):
+4. **Dokumente mit Agent verknüpfen**:
+   - Agent 2 öffnen → **Context** → **Add** → Alle Dokumente auswählen
+
+5. **Veröffentlichen**: **Publish** → **Update Publish**
+
+## Manuelles Agent-Setup inklusive High Quality RAG
+
+### Agent erstellen
+
+1. **In Dify**: **Create App** → **Chat App**
+2. **Model Provider**: Konfigurierte Provider auswählen (Azure OpenAI oder Ollama)
+3. **Knowledge/RAG**: Zunächst deaktiviert lassen
+4. **System Prompt** einfügen:
 ```
 Rolle und Mission:
 Du bist ein Dokumentations-Experte und AI-Coach, genannt 'Agent 2'.
@@ -139,18 +140,30 @@ Abschließende Erinnerung:
 - Zitiere immer Quellen, wenn du dich auf hochgeladene Dokumentation stützt.
 - Bevorzuge praxisnahe Schritte, möglichst wenig Jargon und klare Abwägungen.
 ```
-#### 1.3) PDF-Dokumente hochladen (für RAG)
-  - Klicke auf die Schaltfläche 'Knowledge' in der oberen mittleren Leiste (3. Schaltfläche)
-  - (+) Create Knowledge
-  - Ziehe die Dokumentationsdateien für Agent 1, Agent 3 und die Leistungsbeschreibung-Dokumentation per Drag & Drop hinein.
-  - Weiter > Index-Methode `Economical` (`High quality` ist zwar besser, erfordert jedoch eine Verbindung zu Azure OpenAI, was teure Tokens verwendet)
-  - Speichern & Verarbeiten
 
-#### 1.4) Hochgeladene Dokumente innerhalb des Agents nutzen
-  - Startseite (auf das Dify-Logo klicken) -> Agent 2
-  - unter Knowledge (im Agentenfenster, diesmal nicht in der oberen Leiste) -> (+)Hinzufügen -> Alle vorhin hochgeladenen Dokumente auswählen -> Button Hinzufügen
+5. **Knowledge Base einrichten**:
+   - **Knowledge** → **Create Knowledge**
+   - Markdown-Dokumente oder Dokumentations-PDFs hochladen
+   - **Index Mode**: `Economical` oder für bessere Ergebnisse `High Quality`
+     - `High Quality` benötigt ein lokales Embedding-Modell, dass zunächst heruntergeladen werden muss: `ollama pull nomic-embed-text`. Das Modell muss in Dify als Embedding Model konfiguriert werden (Settings → Model Providers → Add Provider → Ollama → Model Type: Embedding → Model: `nomic-embed-text`)
+   - **Save & Process**
 
-#### 1.5) Veröffentlichen klicken > Update veröffentlichen > App ausführen
+6. **Dokumente verknüpfen**:
+   - Agent 2 → **Knowledge** → **Add** → Alle Dokumente auswählen
 
-### 2) Template für die Weitergabe exportieren (optional)
-- In der App: Vorlage exportieren -> Datei sichern (z. B. dify-template.json).
+7. **Veröffentlichen**: **Publish** → **Update Publish** → **Run App**
+
+### Template exportieren (optional)
+
+**Export**: App → **Export Template** → Datei speichern
+
+## Funktionsweise
+
+**Agent 2** ist ein Dokumentations-Experte und AI-Coach der:
+
+- **Hilft bei Agent-Setup**: Unterstützung bei der Konfiguration von Agent 1 und Agent 3
+- **Beantwortet Fragen**: Nutzt RAG-Zugriff auf alle Dokumentationen
+- **Erklärt Konzepte**: Anfängerfreundliche Erläuterungen zu KI, LLMs, RAG, Prompts
+- **Troubleshooting**: Löst Probleme bei Setup und Nutzung
+
+**Besonderheit**: Zugriff auf die gesamte Projektdokumentation durch RAG-Integration.

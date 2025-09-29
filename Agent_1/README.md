@@ -1,37 +1,37 @@
-# I) Installation KI‑Agent 1 ohne RAG (Dify + Ollama) ✨
+# Agent 1: Design Thinking Assistant
+
+KI-Agent für strukturierte Design Thinking Prozesse ohne RAG (Retrieval-Augmented Generation).
+
+## Voraussetzungen
+
+- ✅ [Grundlegendes Setup](../README.md) abgeschlossen
+- ✅ Docker Desktop läuft
+- ✅ Ollama läuft und die Modelle `llama3.1:8b` und `qwen3:8b` sind heruntergeladen
+- ✅ Dify ist mit Ollama verbunden
+
+## Schnelles Setup (Template-Import)
+
+1. **Template herunterladen**: Lade [`Agent 1.yml`](./Agent%201.yml) herunter
+
+2. **In Dify importieren**:
+   - Dify-Startseite → **Create new app** → **Import DSL file**
+   - `Agent 1.yml` per Drag & Drop hineinziehen
+   - **Create** klicken
+
+3. **Finalisieren**:
+   - Bei fehlenden Plugins: Installation der bestätigen
+   - **Publish** → **Update Publish**
 
 
-### Voraussetzungen
-- Docker Desktop installiert und laufend
-- Git installiert
-- Ollama (und die Modelle llama3.1:8b und qwen3:8b) installiert
-- macOS/Windows empfohlen. Linux geht auch (siehe Dify Doku für Linux).
-- (für macOS) Homebrew installiert
-- README (allgemein) Doku fertig
+## Manuelles Setup
 
+### Agent erstellen
 
-## Easy Setup mit Vorlage-Import
-
-1. Lade die Datei `Agent 1.yml` von GitHub herunter.
-2. Gehe auf die Dify-Startseite und wähle in der Kachen "Neue App erstellen" (linke Seite), die Option "DSL-Datei importieren".
-3. Ziehe die Datei `Agent 1.yml` per Drag & Drop in das Importfeld.
-4. Klicke auf "Erstellen".
-5. Falls Plugins fehlen, schlägt dify automatisch vor, diese zu installieren.
-6. Veröffentliche die App über "Veröffentlichen > Update veröffentlichen".
-
-
-## Manuelles Setup (kein Vorlagen-Import)
-
-> **Es ist vorausgesetzt, dass du Punkt 4 aus README (Allgemein) erledigt hast.**
-
-> **👉 Falls nicht, springe zurück zu [README(Allgemein)](../README.md) Punkt 4.**
-
-
-### 1) Agent 1 Chat App erstellen
-- In Dify: Create App -> Chat App.
-- Provider: OpenAI-API-compatible wählen, dein Modell auswählen.
-- Knowledge/RAG: nicht hinzufügen bzw. deaktiviert lassen.
-- System Prompt (einfügen und bei Bedarf anpassen):
+1. **In Dify**: **Create App** → **Chat App**
+2. **Model Provider**: OpenAI-API-compatible auswählen
+3. **Model**: Dein Ollama-Modell (z.B. `llama3.1:8b`)
+4. **Knowledge/RAG**: Deaktiviert lassen
+5. **System Prompt** einfügen:
 ```
 Rolle und Ziel
 - Du bist 'Agent 1', ein freundlicher, praxisnaher Moderator für ein mehrstufiges Design-Thinking-Verfahren.
@@ -116,7 +116,23 @@ Format-Garantie (Selbstprüfung vor Ausgabe)
 - Verwende pro Abschnitt 3–6 prägnante Stichpunkte. Bei fehlenden Daten setze „[Fehlende Angaben]“ als Stichpunkt.
 - Keine Links, keine Bilder, keine erläuternden Sätze außerhalb des DMC-Blocks.
 ```
-- Publish klicken > Publish update > Run App .
 
-### 3) Template für die Weitergabe exportieren (optional)
-- In der App: Export Template -> Datei sichern (z. B. dify-template.json).
+6. **Veröffentlichen**: **Publish** → **Update Publish** → **Run App**
+
+### Template exportieren (optional)
+
+**Export**: App → **Export Template** → Datei speichern
+
+## Funktionsweise
+
+**Agent 1** führt durch einen strukturierten 7-Schritt Design Thinking Prozess:
+
+1. **Ziel und Kontext** - Problem und gewünschtes Ergebnis definieren
+2. **Nutzer*innen** - Personas und Zielgruppen identifizieren
+3. **Problem und Ursachen** - Symptome und Grundursachen analysieren
+4. **Stakeholder** - Beteiligte und Entscheider erfassen
+5. **Ressourcen** - Verfügbare und benötigte Mittel
+6. **Ideen und Lösungsskizze** - Lösungsoptionen entwickeln
+7. **Erfolgskriterien** - Validierung und Metriken definieren
+
+**Ausgabe**: Strukturierter DMC-Report mit allen Erkenntnissen.
