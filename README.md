@@ -127,7 +127,23 @@ Felder ausfüllen (Beispiel: llama3.1:8b):
 
 ### Hochladen von Dokumenten
 - Es ist möglich, Dokumente hochzuladen, die der KI-Agent später als Informationsquelle verwenden wird. Das wäre z. B. nützlich, wenn du eine große PDF-Datei mit vielen Informationen zu einem bestimmten Thema hast. Du könntest sie hochladen und dem KI-System konkrete Fragen zum Thema stellen. Oder das gesamte Dokument zusammenfassen. Oder Rechtschreibung und Grammatik verbessern. Es gibt viele Anwendungsfälle.
-- Um dies zu tun, gehe zum Knowledge-Tab im Hauptmenü (obere Leiste) > Knowledge erstellen > Import from file > Datei auswählen/Drag&Drop > Weiter > Hochwertig > Speichern & Verarbeiten. Nachdem du es dort hochgeladen hast, kannst du in deinem Chat in der Studio-Ansicht das Knowledge-Dropdown links (nicht oben in der Leiste) verwenden und einfach das zuvor hochgeladene Dokument auswählen. Nun kennt der KI-Agent alles, was in diesem Dokument steht.
+- Um dies zu tun, gehe zum Wissen-Tab im Hauptmenü (obere Leiste) 
+  
+<img width="1359" height="735" alt="image" src="https://github.com/user-attachments/assets/ca4d8b25-b9fe-431a-8604-dc58b6d084b8" />
+
+- Wissen erstellen > Import aus Textdatei > Datei auswählen/Drag&Drop > Weiter > Hochwertig > Speichern & Verarbeiten.
+  
+<img width="1269" height="787" alt="image" src="https://github.com/user-attachments/assets/de9406e6-5bd1-4fe8-b46b-cf6c1921e591" />
+
+- Nachdem du es dort hochgeladen hast, kannst du in deinem Chat in der Studio-Ansicht das Kontextmenü (nicht oben in der Leiste) verwenden und einfach das zuvor hochgeladene Dokument auswählen.
+  
+<img width="1371" height="729" alt="image" src="https://github.com/user-attachments/assets/8b1b30a8-4068-4c05-a297-b9797178ae48" />
+<img width="1304" height="766" alt="image" src="https://github.com/user-attachments/assets/fde1ae5d-14b2-44a7-8935-63c6987a36c9" />
+
+
+- Nun kennt der KI-Agent alles, was in diesem Dokument steht. Dort kann dann auch das Wissen wieder entfernt werden.
+<img width="1291" height="774" alt="image" src="https://github.com/user-attachments/assets/58af3bbb-875d-46c5-8a06-7714b774f8ff" />
+
 
 ### Weitere Funktionen
 - Es gibt viele weitere mögliche Funktionen, die etwas mehr Zeit für die Einrichtung benötigen (z. B. Vision-Funktion zur Analyse hochgeladener Bilder). Wenn du etwas Erfahrung hast und die zusätzliche Zeit investieren möchtest, kannst du versuchen, sie einzurichten.
